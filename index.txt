@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Kitchen — Rituals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="the_kitchen_logo.png" alt="The Kitchen Logo">
+        <h1>THE KITCHEN</h1>
+        <p>Echoes, rituals, and wellness through knowledge.</p>
+    </header>
+
+    <nav>
+        <a href="vault.html">Vault</a>
+        <a href="archive.html">Archive</a>
+        <a href="gate.html">Gate</a>
+    </nav>
+
+    <main>
+        <h2>Welcome</h2>
+        <p>Where stories meet knowledge. Learn about strains, origins, and mindful use.</p>
+    </main>
+
+    <footer>
+        <p>© The Kitchen — Creative & Educational Space</p>
+    </footer>
+</body>
+</html>
