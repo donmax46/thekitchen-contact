@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>The Kitchen — Ritual Library</title>
+<meta name="description" content="The Kitchen — ritual stories, mindful notes, and public wellbeing guidance. Educational content only."/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#060604;
+    --panel: rgba(18,18,16,0.78);
+    --gold:#d4af37;
+    --muted:#b9a768;
+    --glass: rgba(255,255,255,0.02);
+    --card: rgba(255,255,255,0.01);
+    --maxw:980px;
+    --accent: rgba(212,175,55,0.12);
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background:
+      radial-gradient(1200px 600px at -10% -20%, rgba(212,175,55,0.02), transparent 12%),
+      linear-gradient(180deg,var(--bg), #050504 120%);
+    color:var(--gold);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    padding:28px;
+    display:flex;
+    justify-content:center;
+  }
+
+  .site{
+    width:100%;
+    max-width:var(--maxw);
+    background: linear-gradient(180deg, rgba(0,0,0,0.40), rgba(0,0,0,0.25));
+    border-radius:14px;
+    border:1px solid rgba(212,175,55,0.04);
+    overflow:hidden;
+    box-shadow: 0 18px 60px rgba(0,0,0,0.6);
+  }
+
+  header{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    padding:26px 28px;
+    background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.02));
+    border-bottom:1px solid rgba(212,175,55,0.02);
+  }
+  .logo-wrap{
+    width:86px;
+    height:86px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    border:3px solid rgba(212,175,55,0.15);
+    overflow:hidden;
+    background: linear-gradient(180deg,#0b0b0b,#111110);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  }
+  .logo-wrap img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .title{
+    display:flex; flex-direction:column;
+  }
+  .title h1{
+    font-family: 'Playfair Display', serif;
+    font-size:24px; margin:0; letter-spacing:2px;
+  }
+  .title p{ margin:2px 0 0; color:var(--muted); font-size:13px; }
+
+  main{
+    display:grid;
+    grid-template-columns: 1fr 360px;
+    gap:28px;
+    padding:28px;
+  }
+
+  /* left: ritual list */
+  .lead{
+    margin:0 0 12px 0; color:var(--muted); font-size:14px;
+  }
+  .list{
+    display:flex; flex-direction:column; gap:12px;
+  }
+  .item{
+    background:var(--card);
+    border-radius:10px;
+    padding:12px 14px;
+    border:1px solid rgba(212,175,55,0.03);
+    transition: transform .18s ease, box-shadow .18s ease;
+    cursor:pointer;
+  }
+  .item:hover{ transform:translateY(-6px); box-shadow:0 18px 40px rgba(0,0,0,0.6); }
+  .row{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    justify-content:space-between;
+  }
+  .left{
+    display:flex; align-items:center; gap:12px;
+  }
+  .icon{
+    width:44px; height:44px; border-radius:8px; display:flex; align-items:center; justify-content:center;
+    background: rgba(255,255,255,0.02); color:var(--gold); font-size:20px;
+    border:1px solid rgba(212,175,55,0.03);
+  }
+  .name{ font-weight:600; font-size:16px; color:var(--gold); }
+  .brief{ font-size:13px; color:var(--muted); }
+
+  .expand{
+    max-height:0;
+    overflow:hidden;
+    transition: max-height 0.28s ease, padding 0.28s ease;
+    padding: 0 0;
+    font-size:13px; color:var(--muted);
+  }
+  .item.open .expand{ padding-top:10px; max-height:420px; }
+
+  .expand p{ margin:6px 0; line-height:1.4; }
+
+  /* right column: interactive panels */
+  aside{ padding-right:6px; }
+  .panel{
+    background:var(--panel); padding:14px; border-radius:10px; margin-bottom:14px;
+    border:1px solid rgba(212,175,55,0.03);
+  }
+  .panel h3{ margin:0 0 8px 0; color:var(--gold); font-size:15px; }
+  .panel p{ margin:0; color:var(--muted); font-size:13px; line-height:1.45; }
+
+  .safety{ display:flex; flex-direction:column; gap:8px; margin-top:10px; }
+  .safety .note{ background:var(--glass); padding:10px; border-radius:8px; font-size:13px; color:var(--muted); }
+
+  footer{
+    padding:18px 28px; border-top:1px solid rgba(212,175,55,0.02);
+    display:flex; justify-content:space-between; align-items:center;
+  }
+  footer .fleft{ font-size:12px; color:var(--muted); }
+  footer .fright{ color:var(--gold); font-weight:600; font-size:13px; }
+
+  /* small screens */
+  @media (max-width:980px){
+    main{ grid-template-columns:1fr; }
+  }
+  @media (max-width:420px){
+    .logo-wrap{ width:72px; height:72px; }
+    header{ padding:18px; gap:12px; }
+    .title h1{ font-size:20px;}
+  }
+
+  /* subtle background texture */
+  .wrap-texture{ position:relative; }
+  .wrap-texture::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image: radial-gradient(circle at 10% 20%, rgba(212,175,55,0.01), transparent 2%),
+                      radial-gradient(circle at 90% 80%, rgba(212,175,55,0.01), transparent 2%);
+    pointer-events:none;
+  }
+</style>
+</head>
+<body>
+  <div class="site wrap-texture" role="main">
+    <header>
+      <div class="logo-wrap">
+        <img src="the_kitchen_logo.png" alt="The Kitchen logo" onerror="this.style.display='none'">
+      </div>
+      <div class="title">
+        <h1>THE KITCHEN</h1>
+        <p>Where fire meets silence — ritual stories & mindful notes</p>
+      </div>
+    </header>
+
+    <main>
+      <!-- LEFT: list -->
+      <section>
+        <p class="lead">Tap or click any entry to reveal a short educational note and trusted references.</p>
+
+        <div class="list" id="list">
+
+          <!-- Items: 12 coded names -->
+          <!-- 1 -->
+          <div class="item" data-ref="white-magic">
+            <div class="row">
+              <div class="left">
+                <div class="icon">❄️</div>
+                <div>
+                  <div class="name">White Magic</div>
+                  <div class="brief">A coded note on fast clarity and fleeting focus.</div>
+                </div>
+              </div>
+              <div class="chev">+</div>
+            </div>
+            <div class="expand">
+              <p><strong>Vibe:</strong> Sharp, bright, fast mental clarity. <strong>Effects</strong> can include increased focus and stimulation; reactions vary by person and composition.</p>
+              <p><strong>Context:</strong> Global varieties and purity differ greatly; potency is not uniform. Respect sources & avoid mixing with other stimulants.</p>
+              <p><strong>Harm reduction:</strong> Start low if you’re unfamiliar. Ensure hydration, rest between sessions, and never drive or operate machinery while under influence.</p>
+              <p><a target="_blank" rel="noopener noreferrer" href="https://www.who.int/">Learn more — public health info</a> · <a target="_blank" rel="noopener noreferrer" href="https://erowid.org/">Erowid (archives)</a></p>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="item" data-ref="sleep-codes">
+            <div class="row">
+              <div class="left">
+                <div class="icon">💊</div>
+                <div>
+                  <div class="name">Sleep Codes</div>
+                  <div class="brief">Sedative rhythms, slow release — approach with calm.</div>
+                </div>
+              </div>
+              <div class="chev">+</div>
+            </div>
+            <div class="expand">
+              <p><strong>Vibe:</strong> Relaxation, slowed perception, and sedation when used. Interactions with other depressants can be dangerous.</p>
+              <p><strong>Context:</strong> Different compounds and formulations have varied effects; medical supervision matters for prescribed sedatives.</p>
+              <p><strong>Harm reduction:</strong> Never combine with alcohol or other sedatives. Have a sober, trusted person nearby if you’re trying a new formulation.</p>
+              <p><a target="_blank" rel="noopener noreferrer" href="https://www.cdc.gov/">Learn more — public health</a> · <a target="_blank" rel="noopener noreferrer" href="https://erowid.org/">Erowid</a></p>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="item" data-ref="swazy-gold">
+            <div class="row">
+              <div class="left">
+                <div class="icon">🌿</div>
+                <div>
+                  <div class="name">Swazy Gold</div>
+                  <div class="brief">Herbal breath — long exhale and mellow stories.</div>
+                </div>
+              </div>
+              <div class="chev">+</div>
+            </div>
+            <div class="expand">
+              <p><strong>Vibe:</strong> Gentle relaxation, changed perception of time for many users. Effects depend on strain, THC/CBD balance, and tolerance.</p>
+              <p><strong>Context:</strong> Strain types and cannabinoid levels influence effects; legal status varies globally.</p>
+              <p><strong>Harm reduction:</strong> Use in calm environments, avoid heavy tasks, consider low-dose trials if new to it. Learn about laws in your area.</p>
+              <p><a target="_blank" rel="noopener noreferrer" href="https://nida.nih.gov/">Learn more — NIDA</a> · <a target="_blank" rel="noopener noreferrer" href="https://www.leafly.com/">Strain info (Leafly)</a></p>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="item" data-ref="duskline">
+            <div class="row">
+              <div class="left">
+                <div class="icon">🧪</div>
+                <div>
+                  <div class="name">Duskline</div>
+                  <div class="brief">A heavy, story-wrapped rhythm — move with care.</div>
+                </div>
+              </div>
+              <div class="chev">+</div>
+            </div>
+            <div class="expand">
+              <p><strong>Vibe:</strong> Often described as dense, grounding but with strong physiological effects. Avoid pairing with stimulants or unknown substances.</p>
+              <p><strong>Context:</strong> Potency and contaminants alter risk — knowledge of purity and safe-use practices matters.</p>
+              <p><strong>Harm reduction:</strong> Have a plan and a sober contact; know emergency numbers in your area and seek professional help if things go wrong.</p>
+              <p><a target="_blank" rel="noopener noreferrer" href="https://www.who.int/">Public health info</a> · <a target="_blank" rel="noopener noreferrer" href="https://erowid.org/">Erowid</a></p>
+            </div>
+          </div>
+
+          <!-- 5 -->
+          <div class="item" data-ref="paper-spirit">
+            <div class="row">
+              <div class="left">
+                <div class="icon">🌀</div>
+                <div>
+                  <div class="name">Paper Spirit</div>
+                  <div class="brief">Synthetic winds — unpredictable and variable.</div>
+                </div>
+              </div>
+              <div class="chev">+</div>
+            </div>
+            <div class="expand">
+              <p><strong>Vibe:</strong> Can vary dramatically. Synthetic blends may carry unpredictable effects and greater risk from unknown composition.</p>
+              <p><strong>Context:</strong> Synthetic products are not standardized — they pose unique safety concerns.</p>
+              <p><strong>Harm reduction:</strong> Avoid unfamiliar synthetic blends. Use reputable health resources to learn signs of overdose and when to call emergency services.</p>
+              <p><a target="_blank" rel="noopener noreferrer" href="https://www.cdc.gov/">Public health guidance</a> · <a target="_blank" rel="noopener noreferrer" href="https://erowid.org/">Erowid</a></p>
+            </div>
+          </div>
+
+          <!-- 6 -->
+          <div class="item" data-ref="afghan-block">
+            <div class="row">
+              <div class="left">
+                <div class="icon">🔥</div>
+                <div>
+                  <div class="name">Afghan Block</div>
+                  <div class="brief">Smoky earth — long burn, shared stories.</div>
+                </div>
+              </div>
+              <div class="chev">+</div>
+            </div>
+            <div class="expand">
+              <p><strong>Vibe:</strong> A warm, slow effect often associated with social rituals and shared experiences.</p>
+              <p><strong>Context:</strong> Quality, age, and preparation affect the experience — culture and setting are part of effects.</p>
+              <p><strong>Harm reduction:</strong> Ventilate spaces, avoid open flames near combustibles, and be mindful of breathing irritation for vulnerable people.</p>
+              <p><a target="_blank" rel="noopener noreferrer" href="https://nida.nih.gov/">Research & context</a> · <a href="https://erowid.org/" target="_blank" rel="noopener noreferrer">Erowid</a></p>
+            </div>
+          </div>
+
+          <!-- 7 -->
+          <div class="item" data-ref="crystal-sky">
+            <div class="row">
+              <div class="left">
+                <div class="icon">🧊</div>
+                <div>
+                  <div class="name">Crystal Sky</div>
+                  <div class="brief">Sharp energy, long nights — plan and prepare.</div>
+                </div>
+              </div>
+              <div class="chev">+</div>
+            </div>
+            <div class="expand">
+              <p><strong>Vibe:</strong> High-energy effects; can impact sleep, heart rate, and mood.</p>
+              <p><strong>Context:</strong> Use caution with heart conditions, medications, and mental health vulnerabilities.</p>
+              <p><strong>Harm reduction:</strong> Keep hydrated, avoid mixing stimulants, and watch for signs of overheating or distress.</p>
+              <p><a target="_blank" rel="noopener noreferrer" href="https://www.who.int/">WHO info</a> · <a target="_blank" rel="noopener noreferrer" href="https://erowid.org/">Erowid</a></p>
+            </div>
+          </div>
+
+          <!-- 8 -->
+          <div class="item" data-ref="ghost-vape">
+            <div class="row">
+              <div class="left">
+                <div class="icon">☁️</div>
+                <div>
+                  <div class="name">Ghost Vape</div>
+                  <div class="brief">Concentrated oils — discrete, potent, and variable.</div>
+                </div>
+              </div>
+              <div class="chev">+</div>
+            </div>
+            <div class="expand">
+              <p><strong>Vibe:</strong> Potent, often cleaner inhalation but potency varies widely between cartridges and brands.</p>
+              <p><strong>Context:</strong> Temperature, additives, and cartridge quality matter. Not all devices or oils are safe.</p>
+              <p><strong>Harm reduction:</strong> Use tested devices/supplies, avoid unknown additives, and source product information from reputable channels.</p>
+              <p><a target="_blank" rel="noopener noreferrer" href="https://nida.nih.gov/">Research & guidance</a> · <a href="https://erowid.org/" target="_blank" rel="noopener noreferrer">Erowid</a></p>
+            </div>
+          </div>
+
+          <!-- 9 -->
+          <div class="item" data-ref="5d-coins">
+            <div class="row">
+              <div class="left">
+                <div class="icon">✨</div>
+                <div>
+                  <div class="name">5D Coins</div>
+                  <div class="brief">Euphoric beats — social highs and long playlists.</div>
+                </div>
+              </div>
+              <div class="chev">+</div>
+            </div>
+            <div class="expand">
+              <p><strong>Vibe:</strong> Euphoric experiences and heightened sociability are common descriptors.</p>
+              <p><strong>Context:</strong> Tablet content and strength vary; impurities and mixing increase risk.</p>
+              <p><strong>Harm reduction:</strong> Test kits exist for some tablet substances — education reduces risk. Always check local laws and health info.</p>
+              <p><a target="_blank" rel="noopener noreferrer" href="https://www.cdc.gov/">Public health</a> · <a target="_blank" rel="noopener noreferrer" href="https://erowid.org/">Erowid</a></p>
+            </div>
+          </div>
+
+          <!-- 10 -->
+          <div class="item" data-ref="k-hole">
+            <div class="row">
+              <div class="left">
+                <div class="icon">🕳</div>
+                <div>
+                  <div class="name">K-Hole</div>
+                  <div class="brief">Dissociative spaces — profound, sometimes disorienting.</div>
+                </div>
+              </div>
+              <div class="chev">+</div>
+            </div>
+            <div class="expand">
+              <p><strong>Vibe:</strong> Dissociation and altered perception; experiences can be intense and unpredictable.</p>
+              <p><strong>Context:</strong> Medical contexts vary; without supervision risks include injury and breathing problems.</p>
+              <p><strong>Harm reduction:</strong> Keep a sober sitter, avoid mixing with depressants, and seek medical care for adverse reactions.</p>
+              <p><a target="_blank" rel="noopener noreferrer" href="https://www.who.int/">WHO</a> · <a target="_blank" rel="noopener noreferrer" href="https://erowid.org/">Erowid</a></p>
+            </div>
+          </div>
+
+          <!-- 11 -->
+          <div class="item" data-ref="code-traps">
+            <div class="row">
+              <div class="left">
+                <div class="icon">⚙️</div>
+                <div>
+                  <div class="name">Code Traps</div>
+                  <div class="brief">Synthetic pain-line — handle with professional care.</div>
+                </div>
+              </div>
+              <div class="chev">+</div>
+            </div>
+            <div class="expand">
+              <p><strong>Vibe:</strong> Often sedating or analgesic; medical oversight is critical for safe use of prescription compounds.</p>
+              <p><strong>Context:</strong> Prescription medications exist for a reason — follow medical advice and avoid unsupervised combinations.</p>
+              <p><strong>Harm reduction:</strong> If medication is prescribed, follow dosing and consult a clinician for questions.</p>
+              <p><a target="_blank" rel="noopener noreferrer" href="https://www.nps.org.au/">Medical advice resources</a> · <a href="https://erowid.org/" target="_blank" rel="noopener noreferrer">Erowid</a></p>
+            </div>
+          </div>
+
+          <!-- 12 -->
+          <div class="item" data-ref="ghost-touch">
+            <div class="row">
+              <div class="left">
+                <div class="icon">🌫️</div>
+                <div>
+                  <div class="name">Ghost Touch</div>
+                  <div class="brief">A subtle, creeping echo — start small and test the atmosphere.</div>
+                </div>
+              </div>
+              <div class="chev">+</div>
+            </div>
+            <div class="expand">
+              <p><strong>Vibe:</strong> Subtle onset, variable duration — setting and company influence the outcome.</p>
+              <p><strong>Context:</strong> Tolerance and formulations differ; interplay with existing medications is important to note.</p>
+              <p><strong>Harm reduction:</strong> Start with small amounts to learn your reaction; always have access to water, rest, and a sober contact.</p>
+              <p><a target="_blank" rel="noopener noreferrer" href="https://www.who.int/">WHO</a> · <a target="_blank" rel="noopener noreferrer" href="https://erowid.org/">Erowid</a></p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- RIGHT: panels -->
+      <aside>
+        <div class="panel">
+          <h3 id="quoteTitle">"Not every kitchen is for food"</h3>
+          <p id="quoteBody" style="color:var(--muted);font-size:13px">A rotating line of ritual fragments to keep the page alive.</p>
+        </div>
+
+        <div class="panel">
+          <h3>Wellness & Safety</h3>
+          <div class="safety">
+            <div class="note">Start low and go slow — unfamiliar mixes increase risk.</div>
+            <div class="note">Never combine depressants & alcohol; interactions can be life-threatening.</div>
+            <div class="note">Hydration, rest, and a sober companion reduce many risks.</div>
+            <div class="note">If in doubt, consult licensed medical services in your region.</div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>Further reading</h3>
+          <p style="color:var(--muted);font-size:13px">Reliable resources to learn more:</p>
+          <p style="margin-top:8px"><a href="https://www.who.int/" target="_blank" rel="noopener noreferrer" style="color:var(--gold)">World Health Organization</a></p>
+          <p><a href="https://www.nida.nih.gov/" target="_blank" rel="noopener noreferrer" style="color:var(--gold)">NIDA — research</a></p>
+          <p><a href="https://erowid.org/" target="_blank" rel="noopener noreferrer" style="color:var(--gold)">Erowid — experience archives</a></p>
+        </div>
+
+      </aside>
+    </main>
+
+    <footer>
+      <div class="fleft">© The Kitchen — Creative & Educational Space</div>
+      <div class="fright">Rituals drop in silence</div>
+    </footer>
+  </div>
+
+<script>
+  // rotating quotes
+  (function(){
+    const quotes = [
+      "Not every kitchen is for food.",
+      "We call it ritual.",
+      "Only those who know, enter.",
+      "Fire meets silence.",
+      "The menu is not on the wall."
+    ];
+    const el = document.getElementById('quoteTitle');
+    const body = document.getElementById('quoteBody');
+    function tick(){
+      const q = quotes[Math.floor(Math.random()*quotes.length)];
+      el.textContent = '"' + q + '"';
+      body.textContent = "A fragment: " + q;
+    }
+    tick();
+    setInterval(tick, 7000);
+  })();
+
+  // expand/collapse items - accessible & mobile friendly
+  (function(){
+    const items = document.querySelectorAll('.item');
+    items.forEach(it=>{
+      it.addEventListener('click', function(e){
+        // toggle open
+        if(this.classList.contains('open')) {
+          this.classList.remove('open');
+        } else {
+          // close others if you want only one open at a time:
+          // document.querySelectorAll('.item.open').forEach(x=>x.classList.remove('open'));
+          this.classList.add('open');
+          // scroll into view on small screens
+          setTimeout(()=>{ this.scrollIntoView({behavior:'smooth', block:'center'}); }, 150);
+        }
+      });
+      // keyboard accessibility
+      it.setAttribute('tabindex', '0');
+      it.addEventListener('keydown', (ev)=>{
+        if(ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); it.click(); }
+      });
+    });
+  })();
+</script>
+</body>
+</html>
