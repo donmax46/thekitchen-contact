@@ -3,44 +3,37 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Gate — The Kitchen</title>
+  <title>The Kitchen — Gate</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body class="page-gate">
   <header class="site-header">
     <div class="logo-wrap small">
       <div class="logo-circle">
-        <img src="the_kitchen_logo.png" alt="The Kitchen logo" class="logo-img"/>
+        <img src="the_kitchen_logo.png" alt="The Kitchen Logo" class="logo-img"/>
       </div>
     </div>
-
     <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="vault.html">Vault</a>
-      <a href="archive.html">Archive</a>
-      <a href="gate.html" class="active">Gate</a>
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="vault.html"><i class="fas fa-vault"></i> Vault</a>
+      <a href="archive.html"><i class="fas fa-archive"></i> Archive</a>
+      <a href="gate.html" class="active"><i class="fas fa-key"></i> Gate</a>
+      <a href="index_original.html"><i class="fas fa-mask"></i> Mystery</a>
     </nav>
   </header>
 
-  <main class="container gate-main">
+  <main class="container page-gate">
     <h2>The Gate</h2>
-    <p class="muted">Scan the QR to reveal a short, poetic message. This page is intentionally minimal — the QR reveals a private-styled message and nothing that facilitates transactions or contact requests.</p>
-
+    <p class="muted">Scan the QR to see a short poetic message. This page is intentional — QR reveals private-style text only.</p>
     <div class="qr-wrap">
-      <img src="qr_contact.png" alt="QR contact placeholder" class="qr-img" id="qrImage" />
-      <p class="hint">Scan the QR with your phone to reveal the entry message.</p>
+      <img src="qr_contact.png" alt="QR Contact" class="qr-img">
     </div>
-
-    <div class="note">
-      <small>Note: this is a public, conceptual gate for poetic reveal only — no links to purchasing or operational instructions. Replace `qr_contact.png` with your own QR image that points to `reveal.html` if you want that behavior.</small>
-    </div>
+    <p class="muted small note">Ensure `qr_contact.png` is in your published folder — same directory as this file. If it doesn’t show, file path may be wrong.</p>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <small>© The Kitchen — Public, poetic, educational.</small>
-    </div>
+    <small>© The Kitchen — Public, poetic, educational.</small>
   </footer>
 </body>
 </html>
