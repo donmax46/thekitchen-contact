@@ -1,1 +1,115 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Kitchen — Mission</title><link rel="stylesheet" href="style.css"></head><body><header class="header"><img class="logo" src="the_kitchen_logo.png" alt=""><div class="site-title">The Kitchen — Cultural Threads</div><div class="tagline">Exploring ritual, wellness, and the places that shape us.</div></header><nav class="nav"><a href="vault.html">Vault</a><a href="archive.html">Archive</a><a href="gate.html">Gate</a></nav><main class="container"><section class="hero"><h1>Why Dubai, Australia, Italy & Japan?</h1><p>Our practice draws from diverse places. Tourism connects people to places, and travel nourishes the mind — new perspectives, restful pauses, and inspiration. We highlight humane, legal experiences and wellness-focused tourism.</p></section><div class="grid"><div class="card"><h3>Dubai — Oasis of Renewal</h3><p>Dubai's modern infrastructure and safe environment make it a space for calm, wellness retreats, and cultural curiosity.</p></div><div class="card"><h3>Australia — Wild & Wide</h3><p>From coasts to bushland, Australia inspires grounding experiences and outdoor wellness that reconnect body and breath.</p></div><div class="card"><h3>Italy — Artful Living</h3><p>Italy's food, history and community pace encourage mindful enjoyment — a tonic for the hurried mind.</p></div><div class="card"><h3>Japan — Quiet Precision</h3><p>Japanese tradition blends minimalism and ritual, offering lessons in quiet focus and living with care.</p></div></div><section class="card" style="margin-top:18px"><h3>Our Mission</h3><p>We believe rituals and care practices are cultural, not transactional. This space documents lore, supports harm reduction, and points curious people toward reputable sources on safety and wellbeing.</p></section></main><footer class="footer">© The Kitchen — Cultural Threads</footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Kitchen — Ritual Entry</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap');
+
+    body {
+        margin: 0;
+        padding: 0;
+        background: #000;
+        color: #d4af37;
+        font-family: 'Cinzel Decorative', serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    /* Background Smoke Animation */
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: url('smoke_background.png') center/cover no-repeat;
+        filter: brightness(0.6) sepia(0.3) hue-rotate(60deg) saturate(1.2) blur(4px);
+        animation: slowSmoke 60s ease-in-out infinite alternate;
+        z-index: -1;
+    }
+
+    @keyframes slowSmoke {
+        0% { transform: scale(1) translate(0, 0); }
+        50% { transform: scale(1.1) translate(2%, -2%); }
+        100% { transform: scale(1) translate(0, 0); }
+    }
+
+    /* Logo Circle */
+    .logo {
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        background: rgba(0,0,0,0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 40px rgba(212, 175, 55, 0.5);
+        border: 2px solid #d4af37;
+        overflow: hidden;
+    }
+
+    .logo img {
+        width: 180px;
+        height: auto;
+        filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.7));
+    }
+
+    /* Text styling */
+    h1 {
+        margin-top: 20px;
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+
+    p {
+        max-width: 500px;
+        text-align: center;
+        font-size: 1rem;
+        opacity: 0.85;
+    }
+
+    /* Enter Button */
+    .enter-btn {
+        margin-top: 30px;
+        padding: 10px 30px;
+        font-size: 1rem;
+        color: #d4af37;
+        border: 1px solid #d4af37;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .enter-btn:hover {
+        background: rgba(212, 175, 55, 0.1);
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+    }
+
+    /* Mobile tweaks */
+    @media (max-width: 600px) {
+        .logo { width: 160px; height: 160px; }
+        .logo img { width: 130px; }
+        h1 { font-size: 1.4rem; }
+    }
+</style>
+</head>
+<body>
+
+    <div class="logo">
+        <img src="the_kitchen_logo.png" alt="The Kitchen Logo">
+    </div>
+
+    <h1>Welcome to The Kitchen</h1>
+    <p>Where whispers travel, gold drips slow, and only the chosen stir the pot.  
+       Step carefully — each breath carries a ritual.</p>
+
+    <a href="vault.html"><button class="enter-btn">Enter the Ritual</button></a>
+
+</body>
+</html>
