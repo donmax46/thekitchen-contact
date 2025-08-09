@@ -1,50 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Gate — The Kitchen</title>
-<link rel="stylesheet" href="style.css">
-<style>
-    .hint {
-        font-style: italic;
-        font-size: 0.95rem;
-        color: #b08d2e;
-        margin-top: 10px;
-    }
-    .gate-btn {
-        display: inline-block;
-        padding: 10px 20px;
-        margin-top: 20px;
-        border: 2px solid #d4af37;
-        background: transparent;
-        color: #d4af37;
-        font-size: 1.1rem;
-        text-decoration: none;
-        transition: all 0.3s ease;
-    }
-    .gate-btn:hover {
-        background: #d4af37;
-        color: #000;
-    }
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gate — The Kitchen</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
-<body>
+<body class="page-gate">
+  <header class="site-header">
+    <div class="logo-wrap small">
+      <div class="logo-circle">
+        <img src="the_kitchen_logo.png" alt="The Kitchen logo" class="logo-img"/>
+      </div>
+    </div>
 
-<header>
-    <img src="the_kitchen_logo.png" alt="The Kitchen Logo" class="logo">
-    <h1>The Gate</h1>
-</header>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="vault.html">Vault</a>
+      <a href="archive.html">Archive</a>
+      <a href="gate.html" class="active">Gate</a>
+    </nav>
+  </header>
 
-<main>
-    <p>Some doors open only to those who seek without haste.</p>
-    <p class="hint">Follow the trace. The circle waits.</p>
-    <a href="qr_display.html" class="gate-btn">Look Closer</a>
-</main>
+  <main class="container gate-main">
+    <h2>The Gate</h2>
+    <p class="muted">Scan the QR to reveal a short, poetic message. This page is intentionally minimal — the QR reveals a private-styled message and nothing that facilitates transactions or contact requests.</p>
 
-<footer>
-    <p>© The Kitchen — Rituals drop in silence</p>
-</footer>
+    <div class="qr-wrap">
+      <img src="qr_contact.png" alt="QR contact placeholder" class="qr-img" id="qrImage" />
+      <p class="hint">Scan the QR with your phone to reveal the entry message.</p>
+    </div>
 
+    <div class="note">
+      <small>Note: this is a public, conceptual gate for poetic reveal only — no links to purchasing or operational instructions. Replace `qr_contact.png` with your own QR image that points to `reveal.html` if you want that behavior.</small>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© The Kitchen — Public, poetic, educational.</small>
+    </div>
+  </footer>
 </body>
 </html>
