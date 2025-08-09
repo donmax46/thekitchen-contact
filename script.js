@@ -1,0 +1,1 @@
+function toggleDetails(el){const d=el.querySelector('.product-details');if(!d) return;d.style.display=d.style.display==='block'?'none':'block'}
