@@ -1,37 +1,124 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vault — The Kitchen</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vault — The Kitchen</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
-<body class="smoke-bg">
-    <header>
-        <img src="the_kitchen_logo.png" alt="The Kitchen Logo" class="logo small-logo">
-        <h1>The Vault</h1>
-        <p class="tagline">Where whispers turn to knowledge</p>
-    </header>
+<body class="page-vault">
+  <header class="site-header">
+    <div class="logo-wrap small">
+      <div class="logo-circle">
+        <img src="the_kitchen_logo.png" alt="The Kitchen logo" class="logo-img"/>
+      </div>
+    </div>
 
-    <main>
-        <div class="product-grid">
-            <div class="product-card">❄️ White Magic<div class="details">Purity & mindful use — global insights.</div></div>
-            <div class="product-card">🌿 Swazy Gold<div class="details">THC/CBD balance, cultural roots, strains.</div></div>
-            <div class="product-card">🔥 Ghost Touch<div class="details">For rare nights. Effect: Quiet Storm.</div></div>
-            <div class="product-card">💊 Calm Pearl<div class="details">Used for deep rest. Science & caution.</div></div>
-            <div class="product-card">🌑 Afghan Ember<div class="details">Heritage, aroma, and mindful pacing.</div></div>
-            <div class="product-card">🌪 Snow Drum<div class="details">Sharp clarity. Start small. Respect.</div></div>
-            <div class="product-card">💠 Blue Crystal<div class="details">A different hum. Mindful dosage tips.</div></div>
-            <div class="product-card">🌙 Dream Leaf<div class="details">Restorative blend. Traditions & uses.</div></div>
-            <div class="product-card">🌀 Spirit Key<div class="details">Opens inner corridors. Take with care.</div></div>
-            <div class="product-card">💫 Moon Echo<div class="details">Lingering calm. Known worldwide.</div></div>
-            <div class="product-card">🌊 Tide Glass<div class="details">Fluid mind, flowing thoughts.</div></div>
-            <div class="product-card">⚡ Lightning Root<div class="details">Sharp, quick, and brief brilliance.</div></div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="vault.html" class="active">Vault</a>
+      <a href="archive.html">Archive</a>
+      <a href="gate.html">Gate</a>
+    </nav>
+  </header>
+
+  <main class="container vault-main">
+    <h2>Knowledge Vault</h2>
+    <p class="muted">Click any card to expand for public, educational notes. Links point to reputable resources when relevant.</p>
+
+    <section class="vault-grid" id="vaultGrid">
+      <!-- 12 items: 3 columns; each .vault-item has a short title and a hidden .details -->
+      <article class="vault-item" data-index="0">
+        <button class="vault-toggle">❄️ White Smoke</button>
+        <div class="vault-details">
+          <p>Notes on purity, safety, and mindful low starting doses. See <a href="https://www.drugs.com/" target="_blank" rel="noopener">Drugs.com</a> for harm-reduction basics.</p>
         </div>
-    </main>
+      </article>
 
-    <footer>
-        <p>© The Kitchen — Rituals drop in silence</p>
-    </footer>
+      <article class="vault-item" data-index="1">
+        <button class="vault-toggle">🔔 Silent Bells</button>
+        <div class="vault-details">
+          <p>Context on medical use, risks, and safe storage. Start low, stay safe — consult licensed professionals.</p>
+        </div>
+      </article>
+
+      <article class="vault-item" data-index="2">
+        <button class="vault-toggle">🌿 Gold Leaf</button>
+        <div class="vault-details">
+          <p>Strain/varietal context, THC/CBD balance, and general effects. For controlled uses see <a href="https://www.leafly.com/" target="_blank" rel="noopener">Leafly</a>.</p>
+        </div>
+      </article>
+
+      <article class="vault-item" data-index="3">
+        <button class="vault-toggle">🩸 Dark Veins</button>
+        <div class="vault-details">
+          <p>Historical and cultural notes. This entry focuses on story and safety, not procurement.</p>
+        </div>
+      </article>
+
+      <article class="vault-item" data-index="4">
+        <button class="vault-toggle">🌀 Paper Wind</button>
+        <div class="vault-details">
+          <p>Usage effects, harm-reduction pointers, and how communities have historically talked about similar items.</p>
+        </div>
+      </article>
+
+      <article class="vault-item" data-index="5">
+        <button class="vault-toggle">🏜 Desert Dust</button>
+        <div class="vault-details">
+          <p>Regional lore and a note to respect local law. Always follow local rules and consult professionals.</p>
+        </div>
+      </article>
+
+      <article class="vault-item" data-index="6">
+        <button class="vault-toggle">🔮 Crystal Hum</button>
+        <div class="vault-details">
+          <p>Poetic notes on altered perception and safety-first tips for anyone seeking information.</p>
+        </div>
+      </article>
+
+      <article class="vault-item" data-index="7">
+        <button class="vault-toggle">🫙 Oil Ritual (1g)</button>
+        <div class="vault-details">
+          <p>Concentrate basics and safety reminders — dosages vary; consult recognized resources and health professionals.</p>
+        </div>
+      </article>
+
+      <article class="vault-item" data-index="8">
+        <button class="vault-toggle">🫙 Oil Ritual (2g)</button>
+        <div class="vault-details">
+          <p>Stronger dose: start lower if unfamiliar, seek support if unsure.</p>
+        </div>
+      </article>
+
+      <article class="vault-item" data-index="9">
+        <button class="vault-toggle">💖 Love Sparks (5)</button>
+        <div class="vault-details">
+          <p>Social and cultural notes; responsible use, avoid mixing with alcohol or unknown substances.</p>
+        </div>
+      </article>
+
+      <article class="vault-item" data-index="10">
+        <button class="vault-toggle">🌧 Silent Rain</button>
+        <div class="vault-details">
+          <p>Gentle effects, and a reminder: medical warnings vary by region; check licensed sources.</p>
+        </div>
+      </article>
+
+      <article class="vault-item" data-index="11">
+        <button class="vault-toggle">☁️ Ghost Touch</button>
+        <div class="vault-details">
+          <p>Notes on effects & safety. If you or someone is in danger, call local emergency services immediately.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© The Kitchen — Public & educational archive. Not a marketplace.</small>
+    </div>
+  </footer>
 </body>
 </html>
