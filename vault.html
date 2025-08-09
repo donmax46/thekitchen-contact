@@ -5,212 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vault — The Kitchen</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Cinzel', serif;
-            background: url('smoke_background.png') no-repeat center center fixed;
-            background-size: cover;
-            color: #d4af37;
-            text-align: center;
-        }
-        header {
-            padding: 20px;
-        }
-        header img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #d4af37;
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.7);
-        }
-        nav {
-            margin: 20px 0;
-        }
-        nav a {
-            color: #d4af37;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #fff;
-        }
-        h1 {
-            font-size: 2.5em;
-            margin-top: 10px;
-        }
-        h2 {
-            margin-top: 30px;
-            font-size: 1.8em;
-        }
-        .vault-container {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
-        .product-card {
-            background: rgba(0, 0, 0, 0.6);
-            padding: 15px;
-            margin: 10px 0;
-            border: 1px solid #d4af37;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .product-card:hover {
-            transform: scale(1.03);
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
-        }
-        .product-details {
-            display: none;
-            margin-top: 10px;
-            font-size: 0.95em;
-            color: #fff;
-        }
-        footer {
-            margin-top: 40px;
-            padding: 15px;
-            font-size: 0.85em;
-            color: rgba(255, 255, 255, 0.7);
-        }
-        a.learn-more {
-            display: inline-block;
-            margin-top: 5px;
-            color: #d4af37;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        a.learn-more:hover {
-            color: #fff;
-        }
-    </style>
 </head>
-<body>
-
+<body class="smoke-bg">
     <header>
-        <img src="the_kitchen_logo.png" alt="The Kitchen Logo">
-        <h1>The Kitchen — Vault</h1>
+        <img src="the_kitchen_logo.png" alt="The Kitchen Logo" class="logo small-logo">
+        <h1>The Vault</h1>
+        <p class="tagline">Where whispers turn to knowledge</p>
     </header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="archive.html">Archive</a>
-        <a href="gate.html">Gate</a>
-    </nav>
-
-    <main class="vault-container">
-        <h2>Knowledge Vault</h2>
-
-        <div class="product-card" onclick="toggleDetails(this)">
-            ❄️ White Magic
-            <div class="product-details">
-                Global purity insights, mindful dosing, and historic use.
-                <a href="https://www.drugs.com/" target="_blank" class="learn-more">Learn More</a>
-            </div>
+    <main>
+        <div class="product-grid">
+            <div class="product-card">❄️ White Magic<div class="details">Purity & mindful use — global insights.</div></div>
+            <div class="product-card">🌿 Swazy Gold<div class="details">THC/CBD balance, cultural roots, strains.</div></div>
+            <div class="product-card">🔥 Ghost Touch<div class="details">For rare nights. Effect: Quiet Storm.</div></div>
+            <div class="product-card">💊 Calm Pearl<div class="details">Used for deep rest. Science & caution.</div></div>
+            <div class="product-card">🌑 Afghan Ember<div class="details">Heritage, aroma, and mindful pacing.</div></div>
+            <div class="product-card">🌪 Snow Drum<div class="details">Sharp clarity. Start small. Respect.</div></div>
+            <div class="product-card">💠 Blue Crystal<div class="details">A different hum. Mindful dosage tips.</div></div>
+            <div class="product-card">🌙 Dream Leaf<div class="details">Restorative blend. Traditions & uses.</div></div>
+            <div class="product-card">🌀 Spirit Key<div class="details">Opens inner corridors. Take with care.</div></div>
+            <div class="product-card">💫 Moon Echo<div class="details">Lingering calm. Known worldwide.</div></div>
+            <div class="product-card">🌊 Tide Glass<div class="details">Fluid mind, flowing thoughts.</div></div>
+            <div class="product-card">⚡ Lightning Root<div class="details">Sharp, quick, and brief brilliance.</div></div>
         </div>
-
-        <div class="product-card" onclick="toggleDetails(this)">
-            🌿 Swazy Gold
-            <div class="product-details">
-                Strain lineage, THC/CBD balance, cultural roots, global markets.
-                <a href="https://www.leafly.com/" target="_blank" class="learn-more">Learn More</a>
-            </div>
-        </div>
-
-        <div class="product-card" onclick="toggleDetails(this)">
-            🪨 Afghan Stone
-            <div class="product-details">
-                Heritage hashish traditions, aroma profiles, and safe enjoyment.
-                <a href="https://www.leafly.com/" target="_blank" class="learn-more">Learn More</a>
-            </div>
-        </div>
-
-        <div class="product-card" onclick="toggleDetails(this)">
-            💧 Crystal Path
-            <div class="product-details">
-                Meth origins, risk awareness, harm-reduction practices.
-                <a href="https://www.drugs.com/" target="_blank" class="learn-more">Learn More</a>
-            </div>
-        </div>
-
-        <div class="product-card" onclick="toggleDetails(this)">
-            💊 Dream Keys
-            <div class="product-details">
-                Xanax effects, dependency risks, and medical alternatives.
-                <a href="https://www.drugs.com/" target="_blank" class="learn-more">Learn More</a>
-            </div>
-        </div>
-
-        <div class="product-card" onclick="toggleDetails(this)">
-            💊 Velvet Mind
-            <div class="product-details">
-                Lyrica usage, medical background, and responsible practices.
-                <a href="https://www.drugs.com/" target="_blank" class="learn-more">Learn More</a>
-            </div>
-        </div>
-
-        <div class="product-card" onclick="toggleDetails(this)">
-            🍄 Mind Bloom
-            <div class="product-details">
-                Psychedelic mushrooms, cultural history, dosage and setting.
-                <a href="https://www.drugs.com/" target="_blank" class="learn-more">Learn More</a>
-            </div>
-        </div>
-
-        <div class="product-card" onclick="toggleDetails(this)">
-            💨 Ritual Vape
-            <div class="product-details">
-                THC vape safety, cartridge quality, and market variety.
-                <a href="https://www.leafly.com/" target="_blank" class="learn-more">Learn More</a>
-            </div>
-        </div>
-
-        <div class="product-card" onclick="toggleDetails(this)">
-            🌸 Ecstasy Petals
-            <div class="product-details">
-                MDMA cultural roots, dosage guidance, and hydration safety.
-                <a href="https://www.drugs.com/" target="_blank" class="learn-more">Learn More</a>
-            </div>
-        </div>
-
-        <div class="product-card" onclick="toggleDetails(this)">
-            🐫 Desert Drum
-            <div class="product-details">
-                Ketamine's therapeutic uses, risks, and dissociative effects.
-                <a href="https://www.drugs.com/" target="_blank" class="learn-more">Learn More</a>
-            </div>
-        </div>
-
-        <div class="product-card" onclick="toggleDetails(this)">
-            🌬️ Ghost Touch
-            <div class="product-details">
-                Rare blends, cultural symbolism, and ceremonial uses.
-                <a href="https://www.leafly.com/" target="_blank" class="learn-more">Learn More</a>
-            </div>
-        </div>
-
-        <div class="product-card" onclick="toggleDetails(this)">
-            🔮 Ritual Mix
-            <div class="product-details">
-                Combined experiences, safe moderation, and global history.
-                <a href="https://www.drugs.com/" target="_blank" class="learn-more">Learn More</a>
-            </div>
-        </div>
-
     </main>
 
     <footer>
         <p>© The Kitchen — Rituals drop in silence</p>
     </footer>
-
-    <script>
-        function toggleDetails(card) {
-            const details = card.querySelector('.product-details');
-            details.style.display = details.style.display === 'block' ? 'none' : 'block';
-        }
-    </script>
 </body>
 </html>
