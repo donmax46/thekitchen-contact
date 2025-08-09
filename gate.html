@@ -3,64 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Kitchen Gate</title>
+<title>The Gate — The Kitchen</title>
 <link rel="stylesheet" href="style.css">
 <style>
-body {
-    background: url('smoke_background.png') no-repeat center center/cover;
-    color: #d4af37;
-    font-family: 'Cinzel', serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.qr-container {
-    display: inline-block;
-    animation: pulse 3s infinite;
-    border: 5px solid rgba(212, 175, 55, 0.4);
-    border-radius: 12px;
-    padding: 10px;
-}
-
-.qr-container img {
-    max-width: 280px;
-    height: auto;
-    display: block;
-}
-
-@keyframes pulse {
-    0% { transform: scale(1); box-shadow: 0 0 10px rgba(212,175,55,0.4);}
-    50% { transform: scale(1.05); box-shadow: 0 0 30px rgba(212,175,55,0.8);}
-    100% { transform: scale(1); box-shadow: 0 0 10px rgba(212,175,55,0.4);}
-}
-
-h1 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    text-shadow: 0 0 10px black;
-}
-
-p {
-    font-size: 1.2rem;
-    margin-top: 15px;
-    text-shadow: 0 0 5px black;
-}
+    .hint {
+        font-style: italic;
+        font-size: 0.95rem;
+        color: #b08d2e;
+        margin-top: 10px;
+    }
+    .gate-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 20px;
+        border: 2px solid #d4af37;
+        background: transparent;
+        color: #d4af37;
+        font-size: 1.1rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    .gate-btn:hover {
+        background: #d4af37;
+        color: #000;
+    }
 </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Some doors do not open by key…</h1>
-        <div class="qr-container">
-            <img src="qr_code.jpg" alt="Scan to seek the circle">
-        </div>
-        <p>Seek the circle.</p>
-    </div>
+
+<header>
+    <img src="the_kitchen_logo.png" alt="The Kitchen Logo" class="logo">
+    <h1>The Gate</h1>
+</header>
+
+<main>
+    <p>Some doors open only to those who seek without haste.</p>
+    <p class="hint">Follow the trace. The circle waits.</p>
+    <a href="qr_display.html" class="gate-btn">Look Closer</a>
+</main>
+
+<footer>
+    <p>© The Kitchen — Rituals drop in silence</p>
+</footer>
+
 </body>
 </html>
