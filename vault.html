@@ -1,39 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vault — The Kitchen</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-<body class="page-vault">
-  <header class="site-header">
-    <div class="logo-wrap small">
-      <div class="logo-circle">
-        <img src="the_kitchen_logo.png" alt="The Kitchen logo" class="logo-img"/>
-      </div>
-    </div>
-
-    <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="vault.html" class="active">Vault</a>
-      <a href="archive.html">Archive</a>
-      <a href="gate.html">Gate</a>
-    </nav>
+<body>
+  <div class="background-overlay"></div>
+  <header>
+    <img src="the_kitchen_logo.png" alt="The Kitchen Logo" class="logo">
+    <h1>The Kitchen — Vault</h1>
   </header>
 
-  <main class="container vault-main">
-    <h2>Knowledge Vault</h2>
-    <p class="muted">Click any card to expand for public, educational notes. Links point to reputable resources when relevant.</p>
+  <main>
+    <div class="vault-grid">
+      <div class="product-card" style="--delay:0s">❄️ White Magic<div class="product-details">Global purity & mindful dosing.</div></div>
+      <div class="product-card" style="--delay:0.1s">🌿 Swazy Gold<div class="product-details">Strain lineage, THC balance, culture.</div></div>
+      <div class="product-card" style="--delay:0.2s">🪙 Afghan Black<div class="product-details">Hash heritage & potency notes.</div></div>
+      <div class="product-card" style="--delay:0.3s">💠 Crystal Haze<div class="product-details">Profiles of clarity & euphoria.</div></div>
+      <div class="product-card" style="--delay:0.4s">💊 Dream Tabs<div class="product-details">Psychedelic awareness & respect.</div></div>
+      <div class="product-card" style="--delay:0.5s">🪽 Ghost Touch<div class="product-details">Delicate highs, rare finds.</div></div>
+      <div class="product-card" style="--delay:0.6s">🌌 Snow Drum<div class="product-details">Whiteness that hums, lightning clarity.</div></div>
+      <div class="product-card" style="--delay:0.7s">🪶 Raven Drop<div class="product-details">Stealth delivery & precision timing.</div></div>
+      <div class="product-card" style="--delay:0.8s">🌀 Velvet Rush<div class="product-details">Smooth body flow, warm afterglow.</div></div>
+      <div class="product-card" style="--delay:0.9s">🔥 Ember Leaf<div class="product-details">Earthy deep strains & meditative calm.</div></div>
+      <div class="product-card" style="--delay:1s">🌊 Ocean Bloom<div class="product-details">Cool uplift & creativity surge.</div></div>
+      <div class="product-card" style="--delay:1.1s">🌙 Night Lotus<div class="product-details">Dreamlike calm & gentle insight.</div></div>
+    </div>
+  </main>
 
-    <section class="vault-grid" id="vaultGrid">
-      <!-- 12 items: 3 columns; each .vault-item has a short title and a hidden .details -->
-      <article class="vault-item" data-index="0">
-        <button class="vault-toggle">❄️ White Smoke</button>
-        <div class="vault-details">
-          <p>Notes on purity, safety, and mindful low starting doses. See <a href="https://www.drugs.com/" target="_blank" rel="noopener">Drugs.com</a> for harm-reduction basics.</p>
-        </div>
+  <footer>
+    <p>© The Kitchen — Rituals drop in silence</p>
+  </footer>
+</body>
+</html>
       </article>
 
       <article class="vault-item" data-index="1">
