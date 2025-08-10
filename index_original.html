@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Kitchen</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Kitchen — Mystery</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="page-mystery">
   <div class="background-overlay"></div>
-  <header>
-    <img src="the_kitchen_logo.png" alt="The Kitchen Logo" class="logo">
-    <h1>The Kitchen</h1>
+  <header class="site-header">
+    <div class="logo-wrap">
+      <div class="logo-circle"><img src="the_kitchen_logo.png" alt="The Kitchen" class="logo-img"></div>
+    </div>
+    <nav class="main-nav">
+      <a href="index_original.html" class="active">Mystery</a>
+      <a href="vault.html">Vault</a>
+      <a href="archive.html">Archive</a>
+      <a href="gate.html">Gate</a>
+      <a href="index.html">Mission</a>
+    </nav>
   </header>
 
-  <main>
-    <section class="intro">
-      <p>Not every kitchen is for food.</p>
-      <p>Some cook silence.</p>
-      <p>We call it ritual.</p>
-    </section>
-
-    <section class="hint">
-      <a href="gate.html" class="mystery-link">Enter if you know 🔗</a>
-    </section>
+  <main class="container mystery-hero">
+    <h1>Hunters don't need noise</h1>
+    <p class="mystic">Echoes of ritual—kept quiet. New notes drop with little fanfare.</p>
+    <p class="muted">Explore the Vault and Archive for public, non-operational knowledge.</p>
+    <p><a class="mystery-link" href="vault.html">Enter the Vault</a></p>
   </main>
 
-  <footer>
-    <p>© The Kitchen — Rituals drop in silence</p>
+  <footer class="site-footer">
+    <div class="container">
+      <small>© The Kitchen — Public & poetic.</small>
+    </div>
   </footer>
 </body>
 </html>
