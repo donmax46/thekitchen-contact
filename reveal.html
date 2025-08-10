@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -6,25 +6,23 @@
   <title>— The Kitchen —</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* small override for single-panel reveal */
-    body { display:flex; align-items:center; justify-content:center; min-height:100vh; background: #07110b; }
-    .reveal { max-width:700px; background: rgba(10,14,10,0.96); padding:40px; border-radius:16px; text-align:center; box-shadow: 0 40px 80px rgba(0,0,0,0.6); border: 1px solid rgba(255,214,136,0.06); }
-    .reveal h1 { color: #e6c57a; font-size:28px; margin-bottom:14px; letter-spacing:.6px; }
-    .reveal p { color: #fff; font-size:18px; opacity:.95; margin:8px 0; }
-    .poem { color: #ffd88a; font-weight:700; font-size:20px; margin-top:12px; }
-    .subtle { color:#bfbf9e; font-size:13px; margin-top:18px; opacity:.9; }
-    /* small animation */
-    .reveal { transform:translateY(10px); animation: floatIn .7s cubic-bezier(.2,.8,.2,1) both; }
-    @keyframes floatIn { from { transform: translateY(30px) scale(.98); opacity:0 } to { transform: translateY(0) scale(1); opacity:1 } }
+    body{ display:flex; align-items:center; justify-content:center; min-height:100vh; background: #07110b; margin:0; }
+    .reveal{ max-width:720px; background: rgba(10,14,10,0.94); padding:34px; border-radius:14px; text-align:center; box-shadow: 0 30px 60px rgba(0,0,0,0.6); border: 1px solid rgba(255,214,136,0.04); }
+    .reveal h1{ color: #e6c57a; font-size:22px; margin-bottom:8px; }
+    .reveal p{ color:#fff; font-size:18px; margin:8px 0; }
+    .logo-above{ width:110px; margin:0 auto 8px; display:block; }
+    @keyframes floatIn { from { transform: translateY(20px); opacity:0 } to { transform: translateY(0); opacity:1 } }
+    .reveal{ animation: floatIn .6s cubic-bezier(.2,.8,.2,1) both; }
   </style>
 </head>
 <body>
   <main class="reveal" role="main" aria-live="polite">
+    <img src="the_kitchen_logo.png" alt="logo" class="logo-above">
     <h1>— VIP Rituals —</h1>
-    <p class="poem">In chaos, few remain.</p>
+    <p><strong>In chaos, few remain.</strong></p>
     <p>VIP Rituals — The Kitchen by Last Chrise.</p>
-    <p class="subtle">Seek the circle. Join us on Telegram.</p>
-    <p class="muted" style="margin-top:18px;">(This reveal is intentionally minimal — no direct contact or transactional instructions are provided here.)</p>
+    <p class="muted">Seek the circle. Join us on Telegram.</p>
+    <p style="margin-top:12px; font-size:13px; opacity:.8">(This reveal is intentionally minimal — no contact or transactional info is provided.)</p>
   </main>
 </body>
 </html>
