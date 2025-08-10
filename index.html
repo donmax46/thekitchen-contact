@@ -1,36 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>The Kitchen — Mission</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
 </head>
-<body>
+<body class="page-index">
   <div class="background-overlay"></div>
-  <header>
-    <img src="the_kitchen_logo.png" alt="The Kitchen Logo" class="logo">
-    <h1>The Kitchen</h1>
+
+  <header class="site-header">
+    <div class="logo-wrap">
+      <div class="logo-circle"><img src="the_kitchen_logo.png" alt="The Kitchen" class="logo-img"></div>
+    </div>
+
+    <nav class="main-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="vault.html">Vault</a>
+      <a href="archive.html">Archive</a>
+      <a href="gate.html">Gate</a>
+      <a href="index_original.html">Mystery</a>
+    </nav>
   </header>
 
-  <main>
-    <section class="intro">
-      <p>Between shadow and gold lies The Kitchen — a circle where rituals meet wanderlust.</p>
-      <p><strong>Dubai</strong> — jewel of the Middle East, where the desert whispers and the city roars. A land where luxury meets mystery, and where our silent network thrives under the lights.</p>
-      <p><strong>Australia</strong> — sunlit coasts and deep-rooted freedoms. Here, the ritual travels by post, finding seekers across the vast horizon.</p>
-      <p><strong>Italy</strong> — a bridge between art and underground whispers. Tradition meets the avant-garde, and every package tells a story.</p>
-      <p><strong>Japan</strong> — precision, elegance, and reverence for the unseen. Here, the circle is small but unbroken.</p>
+  <main class="hero container">
+    <h1 class="site-title">The Kitchen</h1>
+    <p class="lead">Between shadow and gold lies a circle where ritual meets curiosity. This public space shares folklore, harm-reduction context, and poetic reflections from places we move through.</p>
+
+    <!-- City panels (blended smoke overlay) -->
+    <section class="city-panels">
+      <article class="city" id="dubai">
+        <h2>Dubai</h2>
+        <p class="city-caption">A jewel of night and glass — where light bends over desert hush.</p>
+      </article>
+
+      <article class="city" id="sydney">
+        <h2>Sydney</h2>
+        <p class="city-caption">Coastlines, open sky — slow mail and long horizons inspire quiet exchange.</p>
+      </article>
+
+      <article class="city" id="milan">
+        <h2>Milan</h2>
+        <p class="city-caption">Old lanes and fashioned shadows — stories folded into market corners.</p>
+      </article>
+
+      <article class="city" id="tokyo">
+        <h2>Tokyo</h2>
+        <p class="city-caption">Neon rain and careful rituals — small circles, precise movements.</p>
+      </article>
+    </section>
+
+    <section class="tourism">
+      <h3>Why place matters</h3>
+      <p>The Kitchen reflects local textures of travel and wellbeing: cultural context, restorative pauses, and the subtle craft of keeping things discreet and safe. This site keeps the conversation public and educational.</p>
+      <p class="muted">— For authoritative, harm-reduction references consult Leafly, Drugs.com, or local health services.</p>
     </section>
 
     <section class="hint">
-      <p>Some doors are only found by those who know where to look...</p>
-      <a href="gate.html" class="mystery-link">Seek the Gate</a>
+      <p class="small">Some doors are only found by those who look closely.</p>
+      <a class="mystery-link" href="gate.html">Seek the Gate</a>
     </section>
   </main>
 
-  <footer>
-    <p>© The Kitchen — Rituals drop in silence</p>
+  <footer class="site-footer">
+    <div class="container">
+      <small>© The Kitchen — Creative & educational.</small>
+    </div>
   </footer>
 </body>
 </html>
