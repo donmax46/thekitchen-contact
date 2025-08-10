@@ -1,38 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Vault — The Kitchen</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
 </head>
-<body>
+<body class="page-vault">
   <div class="background-overlay"></div>
-  <header>
-    <img src="the_kitchen_logo.png" alt="The Kitchen Logo" class="logo">
-    <h1>The Kitchen — Vault</h1>
+
+  <header class="site-header">
+    <div class="logo-wrap small"><div class="logo-circle"><img src="the_kitchen_logo.png" alt="logo" class="logo-img"></div></div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="vault.html" class="active">Vault</a>
+      <a href="archive.html">Archive</a>
+      <a href="gate.html">Gate</a>
+    </nav>
   </header>
 
-  <main>
-    <div class="vault-grid">
-      <div class="product-card" style="--delay:0s">❄️ White Magic<div class="product-details">Global purity & mindful dosing.</div></div>
-      <div class="product-card" style="--delay:0.1s">🌿 Swazy Gold<div class="product-details">Strain lineage, THC balance, culture.</div></div>
-      <div class="product-card" style="--delay:0.2s">🪙 Afghan Black<div class="product-details">Hash heritage & potency notes.</div></div>
-      <div class="product-card" style="--delay:0.3s">💠 Crystal Haze<div class="product-details">Profiles of clarity & euphoria.</div></div>
-      <div class="product-card" style="--delay:0.4s">💊 Dream Tabs<div class="product-details">Psychedelic awareness & respect.</div></div>
-      <div class="product-card" style="--delay:0.5s">🪽 Ghost Touch<div class="product-details">Delicate highs, rare finds.</div></div>
-      <div class="product-card" style="--delay:0.6s">🌌 Snow Drum<div class="product-details">Whiteness that hums, lightning clarity.</div></div>
-      <div class="product-card" style="--delay:0.7s">🪶 Raven Drop<div class="product-details">Stealth delivery & precision timing.</div></div>
-      <div class="product-card" style="--delay:0.8s">🌀 Velvet Rush<div class="product-details">Smooth body flow, warm afterglow.</div></div>
-      <div class="product-card" style="--delay:0.9s">🔥 Ember Leaf<div class="product-details">Earthy deep strains & meditative calm.</div></div>
-      <div class="product-card" style="--delay:1s">🌊 Ocean Bloom<div class="product-details">Cool uplift & creativity surge.</div></div>
-      <div class="product-card" style="--delay:1.1s">🌙 Night Lotus<div class="product-details">Dreamlike calm & gentle insight.</div></div>
-    </div>
+  <main class="container vault-main">
+    <h2>Knowledge Vault</h2>
+    <p class="muted">Click a card for public, educational notes. Links lead to reputable references where relevant.</p>
+
+    <section class="vault-grid" id="vaultGrid">
+      <!-- Each .vault-item shows emoji + coded name, details hidden until click -->
+      <article class="vault-item" style="--i:0">
+        <button class="vault-toggle">❄️ White Smoke</button>
+        <div class="vault-details">A brisk clarity in description — discuss effects responsibly. See general harm-reduction resources for safe practices.</div>
+      </article>
+
+      <article class="vault-item" style="--i:1">
+        <button class="vault-toggle">🔔 Silent Bells</button>
+        <div class="vault-details">Notes on calming medicines and the importance of medical supervision when relevant.</div>
+      </article>
+
+      <article class="vault-item" style="--i:2">
+        <button class="vault-toggle">🌿 Swazy Gold</button>
+        <div class="vault-details">Strain contexts, cannabinoid basics, and non-promotional guidance. Consult licensed sources for details.</div>
+      </article>
+
+      <article class="vault-item" style="--i:3">
+        <button class="vault-toggle">🪙 Afghan Black</button>
+        <div class="vault-details">Cultural history and why provenance affects perception. Respect local law and safety.</div>
+      </article>
+
+      <article class="vault-item" style="--i:4">
+        <button class="vault-toggle">💠 Crystal Haze</button>
+        <div class="vault-details">Reflections on stimulant effects and health considerations; prioritize rest and hydration.</div>
+      </article>
+
+      <article class="vault-item" style="--i:5">
+        <button class="vault-toggle">💊 Dream Tabs</button>
+        <div class="vault-details">Educational context about altered perception, set and setting, and risks; seek professional resources if concerned.</div>
+      </article>
+
+      <article class="vault-item" style="--i:6">
+        <button class="vault-toggle">🪽 Ghost Touch</button>
+        <div class="vault-details">Descriptions focus on expected sensations and safety-first language rather than procurement.</div>
+      </article>
+
+      <article class="vault-item" style="--i:7">
+        <button class="vault-toggle">🌌 Snow Drum</button>
+        <div class="vault-details">Short-lived clarity — guidance centers on personal sensitivity and harm reduction.</div>
+      </article>
+
+      <article class="vault-item" style="--i:8">
+        <button class="vault-toggle">🪶 Raven Drop</button>
+        <div class="vault-details">Notes on discretion in folklore and the importance of privacy as cultural context — no operational details.</div>
+      </article>
+
+      <article class="vault-item" style="--i:9">
+        <button class="vault-toggle">🌀 Velvet Rush</button>
+        <div class="vault-details">Mellow body sensations and the value of beginning with low amounts if learning about effects (educational only).</div>
+      </article>
+
+      <article class="vault-item" style="--i:10">
+        <button class="vault-toggle">🔥 Ember Leaf</button>
+        <div class="vault-details">Earthy profiles and general notes on consumption safety; consult reputable guides for medical details.</div>
+      </article>
+
+      <article class="vault-item" style="--i:11">
+        <button class="vault-toggle">🌙 Night Lotus</button>
+        <div class="vault-details">Gentle reflections on rest and introspection; seek help from medical professionals if needed.</div>
+      </article>
+    </section>
+
+    <!-- Wellness & Safety block (public, non-operational) -->
+    <section class="wellness">
+      <h3>Wellness & Safety</h3>
+      <p>We emphasise harm-reduction: start low, know substances affect individuals differently, never mix unknown combinations, and seek medical help for emergencies. For reliable information consult trusted health sources and drug information sites.</p>
+
+      <div class="reading">
+        <h4>Further reading</h4>
+        <ul>
+          <li><a href="https://www.leafly.com/" target="_blank" rel="noopener">Leafly — strain & cannabis info</a></li>
+          <li><a href="https://www.drugs.com/" target="_blank" rel="noopener">Drugs.com — general substance info</a></li>
+          <li><a href="https://www.samhsa.gov/" target="_blank" rel="noopener">SAMHSA — support resources (US)</a></li>
+        </ul>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <p>© The Kitchen — Rituals drop in silence</p>
+  <footer class="site-footer">
+    <div class="container"><small>© The Kitchen — Creative & educational.</small></div>
   </footer>
 </body>
 </html>
