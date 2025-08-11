@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -12,59 +12,52 @@
 
   <header class="site-header">
     <div class="logo-wrap">
-      <div class="logo-circle"><img src="the_kitchen_logo.png" alt="The Kitchen" class="logo-img"></div>
+      <div class="logo-circle"><img src="the_kitchen_logo.png" alt="The Kitchen logo" class="logo-img"></div>
     </div>
 
     <nav class="main-nav">
-      <a href="index.html" class="active">Home</a>
-      <a href="vault.html">Vault</a>
-      <a href="archive.html">Archive</a>
-      <a href="gate.html">Gate</a>
-      <a href="index_original.html">Mystery</a>
+      <a href="index.html">🏠 Home</a>
+      <a href="vault.html">🗃️ Vault</a>
+      <a href="archive.html">📜 Archive</a>
+      <a href="gate.html">🔐 Gate</a>
+      <a href="index_original.html">🕯 Mystery</a>
     </nav>
   </header>
 
-  <main class="hero container">
-    <h1 class="site-title">The Kitchen</h1>
-    <p class="lead">Between shadow and gold lies a circle where ritual meets curiosity. This public space shares folklore, harm-reduction context, and poetic reflections from places we move through.</p>
-
-    <!-- City panels (blended smoke overlay) -->
-    <section class="city-panels">
-      <article class="city" id="dubai">
-        <h2>Dubai</h2>
-        <p class="city-caption">A jewel of night and glass — where light bends over desert hush.</p>
-      </article>
-
-      <article class="city" id="sydney">
-        <h2>Sydney</h2>
-        <p class="city-caption">Coastlines, open sky — slow mail and long horizons inspire quiet exchange.</p>
-      </article>
-
-      <article class="city" id="milan">
-        <h2>Milan</h2>
-        <p class="city-caption">Old lanes and fashioned shadows — stories folded into market corners.</p>
-      </article>
-
-      <article class="city" id="tokyo">
-        <h2>Tokyo</h2>
-        <p class="city-caption">Neon rain and careful rituals — small circles, precise movements.</p>
-      </article>
+  <!-- Full-screen city slides -->
+  <main id="city-slideshow" class="slideshow">
+    <section class="slide" data-bg="dubai_city.png">
+      <div class="slide-inner">
+        <h1>The Kitchen</h1>
+        <p class="lead">Dubai — a jewel of night and glass. Where light bends over the desert hush.</p>
+      </div>
     </section>
 
-    <section class="tourism">
-      <h3>Why place matters</h3>
-      <p>The Kitchen reflects local textures of travel and wellbeing: cultural context, restorative pauses, and the subtle craft of keeping things discreet and safe. This site keeps the conversation public and educational.</p>
-      <p class="muted">— For authoritative, harm-reduction references consult Leafly, Drugs.com, or local health services.</p>
+    <section class="slide" data-bg="sydney_city.png">
+      <div class="slide-inner">
+        <h1>The Kitchen</h1>
+        <p class="lead">Sydney — coastlines and slow horizons. Quiet exchanges and long tides of thought.</p>
+      </div>
     </section>
 
-    <section class="hint">
-      <p class="small">Some doors are only found by those who look closely.</p>
-      <a class="mystery-link" href="gate.html">Seek the Gate</a>
+    <section class="slide" data-bg="milan_city.png">
+      <div class="slide-inner">
+        <h1>The Kitchen</h1>
+        <p class="lead">Milan — lanes of shadow and light, where tradition and new rituals meet.</p>
+      </div>
+    </section>
+
+    <section class="slide" data-bg="tokyo_city.png">
+      <div class="slide-inner">
+        <h1>The Kitchen</h1>
+        <p class="lead">Tokyo — neon rain and small perfect circles. Precision, hush, and ritual respect.</p>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container">
+      <p class="small muted">Some doors are only found by those who look closely. This site is public and educational.</p>
       <small>© The Kitchen — Creative & educational.</small>
     </div>
   </footer>
