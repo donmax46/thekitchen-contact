@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -13,84 +13,83 @@
   <header class="site-header">
     <div class="logo-wrap small"><div class="logo-circle"><img src="the_kitchen_logo.png" alt="logo" class="logo-img"></div></div>
     <nav class="main-nav">
-      <a href="index.html">Home</a>
-      <a href="vault.html" class="active">Vault</a>
-      <a href="archive.html">Archive</a>
-      <a href="gate.html">Gate</a>
+      <a href="index.html">🏠 Home</a>
+      <a href="vault.html" class="active">🗃️ Vault</a>
+      <a href="archive.html">📜 Archive</a>
+      <a href="gate.html">🔐 Gate</a>
     </nav>
   </header>
 
   <main class="container vault-main">
     <h2>Knowledge Vault</h2>
-    <p class="muted">Click a card for public, educational notes. Links lead to reputable references where relevant.</p>
+    <p class="muted">Public, educational notes and poetic context. Click a card to expand.</p>
 
-    <section class="vault-grid" id="vaultGrid">
-      <!-- Each .vault-item shows emoji + coded name, details hidden until click -->
-      <article class="vault-item" style="--i:0">
+    <section class="vault-grid">
+      <!-- each vault-item references a BG file named in the plan -->
+      <article class="vault-item" data-bg="bg_white_smoke.png" style="--i:0">
         <button class="vault-toggle">❄️ White Smoke</button>
-        <div class="vault-details">A brisk clarity in description — discuss effects responsibly. See general harm-reduction resources for safe practices.</div>
+        <div class="vault-details">A brisk clarity; harm-reduction reminders and general safety context.</div>
       </article>
 
-      <article class="vault-item" style="--i:1">
+      <article class="vault-item" data-bg="bg_silent_bells.png" style="--i:1">
         <button class="vault-toggle">🔔 Silent Bells</button>
-        <div class="vault-details">Notes on calming medicines and the importance of medical supervision when relevant.</div>
+        <div class="vault-details">Notes on calming medicines, interactions, and safe storage (educational only).</div>
       </article>
 
-      <article class="vault-item" style="--i:2">
+      <article class="vault-item" data-bg="bg_swazy_gold.png" style="--i:2">
         <button class="vault-toggle">🌿 Swazy Gold</button>
-        <div class="vault-details">Strain contexts, cannabinoid basics, and non-promotional guidance. Consult licensed sources for details.</div>
+        <div class="vault-details">Strain context, THC/CBD basics, and reputable resources for further reading.</div>
       </article>
 
-      <article class="vault-item" style="--i:3">
+      <article class="vault-item" data-bg="bg_afghan_black.png" style="--i:3">
         <button class="vault-toggle">🪙 Afghan Black</button>
-        <div class="vault-details">Cultural history and why provenance affects perception. Respect local law and safety.</div>
+        <div class="vault-details">Cultural history and the importance of provenance; always follow local law.</div>
       </article>
 
-      <article class="vault-item" style="--i:4">
+      <article class="vault-item" data-bg="bg_crystal_haze.png" style="--i:4">
         <button class="vault-toggle">💠 Crystal Haze</button>
-        <div class="vault-details">Reflections on stimulant effects and health considerations; prioritize rest and hydration.</div>
+        <div class="vault-details">Clarity and stimulant profiles; hydration and rest are important during use.</div>
       </article>
 
-      <article class="vault-item" style="--i:5">
+      <article class="vault-item" data-bg="bg_dream_tabs.png" style="--i:5">
         <button class="vault-toggle">💊 Dream Tabs</button>
-        <div class="vault-details">Educational context about altered perception, set and setting, and risks; seek professional resources if concerned.</div>
+        <div class="vault-details">Notes on perceptual shifts, set-and-setting, and seeking help if overwhelmed.</div>
       </article>
 
-      <article class="vault-item" style="--i:6">
+      <article class="vault-item" data-bg="bg_ghost_touch.png" style="--i:6">
         <button class="vault-toggle">🪽 Ghost Touch</button>
-        <div class="vault-details">Descriptions focus on expected sensations and safety-first language rather than procurement.</div>
+        <div class="vault-details">Delicate highs and safety-first tips for curious minds.</div>
       </article>
 
-      <article class="vault-item" style="--i:7">
+      <article class="vault-item" data-bg="bg_snow_drum.png" style="--i:7">
         <button class="vault-toggle">🌌 Snow Drum</button>
-        <div class="vault-details">Short-lived clarity — guidance centers on personal sensitivity and harm reduction.</div>
+        <div class="vault-details">Brief clarity and potency notes; start low, go slow (educational guidance).</div>
       </article>
 
-      <article class="vault-item" style="--i:8">
+      <article class="vault-item" data-bg="bg_raven_drop.png" style="--i:8">
         <button class="vault-toggle">🪶 Raven Drop</button>
-        <div class="vault-details">Notes on discretion in folklore and the importance of privacy as cultural context — no operational details.</div>
+        <div class="vault-details">Stories of discretion in lore; prioritise safety and legality.</div>
       </article>
 
-      <article class="vault-item" style="--i:9">
+      <article class="vault-item" data-bg="bg_velvet_rush.png" style="--i:9">
         <button class="vault-toggle">🌀 Velvet Rush</button>
-        <div class="vault-details">Mellow body sensations and the value of beginning with low amounts if learning about effects (educational only).</div>
+        <div class="vault-details">Body-centered sensations and harm-reduction reminders.</div>
       </article>
 
-      <article class="vault-item" style="--i:10">
+      <article class="vault-item" data-bg="bg_ember_leaf.png" style="--i:10">
         <button class="vault-toggle">🔥 Ember Leaf</button>
-        <div class="vault-details">Earthy profiles and general notes on consumption safety; consult reputable guides for medical details.</div>
+        <div class="vault-details">Earthy strain notes and guidance on mindful intake.</div>
       </article>
 
-      <article class="vault-item" style="--i:11">
+      <article class="vault-item" data-bg="bg_night_lotus.png" style="--i:11">
         <button class="vault-toggle">🌙 Night Lotus</button>
-        <div class="vault-details">Gentle reflections on rest and introspection; seek help from medical professionals if needed.</div>
+        <div class="vault-details">Gentle calm and suggestions to seek licensed guidance for concerns.</div>
       </article>
     </section>
 
-    <!-- Wellness & Safety block (public, non-operational) -->
     <section class="wellness">
       <h3>Wellness & Safety</h3>
-      <p>We emphasise harm-reduction: start low, know substances affect individuals differently, never mix unknown combinations, and seek medical help for emergencies. For reliable information consult trusted health sources and drug information sites.</p>
+      <p>We encourage harm-reduction: start low, know that effects vary, never mix unknown substances, and seek medical help in emergencies. This vault is educational, not operational.</p>
 
       <div class="reading">
         <h4>Further reading</h4>
@@ -103,8 +102,6 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container"><small>© The Kitchen — Creative & educational.</small></div>
-  </footer>
+  <footer class="site-footer"><div class="container"><small>© The Kitchen — Creative & educational.</small></div></footer>
 </body>
 </html>
