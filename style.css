@@ -749,52 +749,138 @@ body::before{
   z-index:-1;
 
 }
-/* CATEGORY IMAGES */
+/* CATEGORY + PRODUCT VISUALS */
 
-.category-image.exotics{
+.category-image,
+.product-image{
+
+  height:240px;
+
+  position:relative;
+
+  overflow:hidden;
+
   background:
-    linear-gradient(rgba(0,0,0,0.3),
-    rgba(0,0,0,0.5)),
-    url('assets/exotics.jpg')
-    center/cover no-repeat;
+    radial-gradient(circle at top left,
+    rgba(212,175,55,0.25),
+    transparent 35%),
+
+    radial-gradient(circle at bottom right,
+    rgba(255,140,0,0.15),
+    transparent 40%),
+
+    linear-gradient(
+    135deg,
+    #050505,
+    #101010,
+    #050505);
+
 }
 
-.category-image.oils{
+/* GOLD LIGHT EFFECT */
+
+.category-image::before,
+.product-image::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:-30%;
+
   background:
-    linear-gradient(rgba(0,0,0,0.3),
-    rgba(0,0,0,0.5)),
-    url('assets/oils.jpg')
-    center/cover no-repeat;
+    linear-gradient(
+    120deg,
+    transparent,
+    rgba(212,175,55,0.18),
+    transparent);
+
+  transform:rotate(25deg);
+
+  animation:shineMove 5s linear infinite;
+
 }
 
-.category-image.vapes{
+/* ATMOSPHERIC SMOKE */
+
+.category-image::after,
+.product-image::after{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
   background:
-    linear-gradient(rgba(0,0,0,0.3),
-    rgba(0,0,0,0.5)),
-    url('assets/vapes.jpg')
-    center/cover no-repeat;
+    radial-gradient(circle,
+    rgba(255,255,255,0.03),
+    transparent 70%);
+
+  opacity:0.6;
+
+  animation:smokeFloat 8s infinite alternate;
+
 }
 
-.category-image.hashish{
-  background:
-    linear-gradient(rgba(0,0,0,0.3),
-    rgba(0,0,0,0.5)),
-    url('assets/hashish.jpg')
-    center/cover no-repeat;
+/* CATEGORY LABEL COLORS */
+
+.exotics{
+  border-top:2px solid #d4af37;
 }
 
-.category-image.accessories{
-  background:
-    linear-gradient(rgba(0,0,0,0.3),
-    rgba(0,0,0,0.5)),
-    url('assets/accessories.jpg')
-    center/cover no-repeat;
+.oils{
+  border-top:2px solid #ffb347;
 }
 
-.category-image.edibles{
-  background:
-    linear-gradient(rgba(0,0,0,0.3),
-    rgba(0,0,0,0.5)),
-    url('assets/edibles.jpg')
-    center/cover no-repeat;
+.vapes{
+  border-top:2px solid #ff7b00;
+}
+
+.hashish{
+  border-top:2px solid #f5d98a;
+}
+
+.accessories{
+  border-top:2px solid #d4af37;
+}
+
+.edibles{
+  border-top:2px solid #ffd700;
+}
+
+/* SHINE ANIMATION */
+
+@keyframes shineMove{
+
+  0%{
+    transform:
+    translateX(-100%)
+    rotate(25deg);
+  }
+
+  100%{
+    transform:
+    translateX(250%)
+    rotate(25deg);
+  }
+
+}
+
+/* SMOKE FLOAT */
+
+@keyframes smokeFloat{
+
+  from{
+    transform:
+    translateY(-10px)
+    scale(1);
+  }
+
+  to{
+    transform:
+    translateY(10px)
+    scale(1.1);
+  }
+
 }
