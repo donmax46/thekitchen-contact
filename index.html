@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <meta charset="UTF-8" />
@@ -14,14 +15,16 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+  <script src="https://kit.fontawesome.com/7b4f3f7d13.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
 
-  <!-- TOP BAR -->
+  <!-- TOPBAR -->
 
   <div class="topbar">
-    PRIVATE ACCESS • PREMIUM SELECTION
+    PRIVATE ACCESS • PREMIUM SELECTION • TRUSTED NETWORK
   </div>
 
   <!-- NAVBAR -->
@@ -29,20 +32,25 @@
   <header class="navbar">
 
     <div class="logo">
-      THE KITCHEN
+
+      <img src="assets/logo.png" alt="THE KITCHEN">
+
     </div>
 
     <nav>
 
       <a href="#">HOME</a>
-      <a href="#">SHOP</a>
-      <a href="#">ABOUT</a>
-      <a href="#">HOW IT WORKS</a>
-      <a href="#">CONTACT</a>
+      <a href="#categories">SHOP</a>
+      <a href="#how">HOW IT WORKS</a>
+      <a href="#contact">CONTACT</a>
 
     </nav>
 
-    <a href="#" class="whatsapp-btn">
+    <a
+      href="https://wa.me/237652172270"
+      target="_blank"
+      class="whatsapp-btn"
+    >
       ORDER ON WHATSAPP
     </a>
 
@@ -51,6 +59,9 @@
   <!-- HERO -->
 
   <section class="hero">
+
+    <div class="smoke smoke1"></div>
+    <div class="smoke smoke2"></div>
 
     <div class="hero-left">
 
@@ -66,17 +77,24 @@
       <p class="hero-description">
 
         Curated premium products delivered with quality,
-        professionalism and trust through private networks.
+        professionalism and trust through private coordination.
 
       </p>
 
       <div class="hero-buttons">
 
-        <a href="#" class="gold-btn">
+        <a
+          href="#categories"
+          class="gold-btn"
+        >
           BROWSE PRODUCTS
         </a>
 
-        <a href="#" class="outline-btn">
+        <a
+          href="https://wa.me/237652172270"
+          target="_blank"
+          class="outline-btn"
+        >
           ORDER ON WHATSAPP
         </a>
 
@@ -86,23 +104,11 @@
 
     <div class="hero-right">
 
-      <div class="logo-circle">
-
-        <div class="logo-inner">
-
-          <h2>THE</h2>
-
-          <h1>KITCHEN</h1>
-
-          <p>DXB</p>
-
-          <span>
-            PREMIUM SELECTION • DISCREET SERVICE
-          </span>
-
-        </div>
-
-      </div>
+      <img
+        src="assets/logo.png"
+        alt="THE KITCHEN"
+        class="hero-logo"
+      >
 
     </div>
 
@@ -113,30 +119,34 @@
   <section class="features">
 
     <div class="feature-box">
+      <i class="fa-brands fa-bitcoin"></i>
       <h3>CRYPTO PAYMENTS</h3>
-      <p>Secure Transactions</p>
+      <p>Secure transactions</p>
     </div>
 
     <div class="feature-box">
+      <i class="fa-solid fa-box"></i>
       <h3>DISCREET DELIVERY</h3>
-      <p>Worldwide Coordination</p>
+      <p>Worldwide coordination</p>
     </div>
 
     <div class="feature-box">
-      <h3>PREMIUM QUALITY</h3>
-      <p>Curated Selection</p>
-    </div>
-
-    <div class="feature-box">
+      <i class="fa-solid fa-shield"></i>
       <h3>TRUSTED SERVICE</h3>
-      <p>24/7 Support</p>
+      <p>Premium support</p>
+    </div>
+
+    <div class="feature-box">
+      <i class="fa-solid fa-crown"></i>
+      <h3>PREMIUM QUALITY</h3>
+      <p>Luxury standards</p>
     </div>
 
   </section>
 
-  <!-- CATEGORY SECTION -->
+  <!-- CATEGORIES -->
 
-  <section class="categories">
+  <section class="categories" id="categories">
 
     <div class="section-title">
       SHOP BY CATEGORY
@@ -145,88 +155,58 @@
     <div class="category-grid">
 
       <div class="category-card">
-        <div class="category-image"></div>
-        <h3>EXOTICS</h3>
-        <p>VIEW PRODUCTS</p>
+
+        <img src="assets/product1.jpg">
+
+        <div class="card-content">
+
+          <h3>EXOTICS</h3>
+
+          <p>Premium selection</p>
+
+        </div>
+
       </div>
 
       <div class="category-card">
-        <div class="category-image"></div>
-        <h3>OILS</h3>
-        <p>VIEW PRODUCTS</p>
+
+        <img src="assets/product2.jpg">
+
+        <div class="card-content">
+
+          <h3>OILS</h3>
+
+          <p>Luxury collection</p>
+
+        </div>
+
       </div>
 
       <div class="category-card">
-        <div class="category-image"></div>
-        <h3>ACCESSORIES</h3>
-        <p>VIEW PRODUCTS</p>
+
+        <img src="assets/product3.jpg">
+
+        <div class="card-content">
+
+          <h3>ACCESSORIES</h3>
+
+          <p>Private access</p>
+
+        </div>
+
       </div>
 
       <div class="category-card">
-        <div class="category-image"></div>
-        <h3>COLLECTIONS</h3>
-        <p>VIEW PRODUCTS</p>
-      </div>
 
-    </div>
+        <img src="assets/product4.jpg">
 
-  </section>
+        <div class="card-content">
 
-  <!-- FEATURED PRODUCTS -->
+          <h3>COLLECTIONS</h3>
 
-  <section class="products">
+          <p>Premium curation</p>
 
-    <div class="section-title">
-      FEATURED PRODUCTS
-    </div>
-
-    <div class="product-grid">
-
-      <div class="product-card">
-
-        <div class="product-image"></div>
-
-        <h3>PREMIUM GOLD SERIES</h3>
-
-        <p>
-          Luxury curated collection with premium quality standards.
-        </p>
-
-        <a href="#" class="product-btn">
-          ORDER NOW
-        </a>
-
-      </div>
-
-      <div class="product-card">
-
-        <div class="product-image"></div>
-
-        <h3>PRIVATE ACCESS COLLECTION</h3>
-
-        <p>
-          Exclusive premium access and discreet coordination.
-        </p>
-
-        <a href="#" class="product-btn">
-          ORDER NOW
-        </a>
-
-      </div>
-
-      <div class="product-card">
-
-        <div class="product-image"></div>
-
-        <h3>GLOBAL DELIVERY SERIES</h3>
-
-        <p>
-          Trusted worldwide coordination and premium service.
-        </p>
-
-        <a href="#" class="product-btn">
-          ORDER NOW
-        </a>
+        </div>
 
       </div>
 
@@ -236,7 +216,7 @@
 
   <!-- HOW IT WORKS -->
 
-  <section class="how-it-works">
+  <section class="how" id="how">
 
     <div class="section-title">
       HOW IT WORKS
@@ -245,28 +225,71 @@
     <div class="steps">
 
       <div class="step">
+
         <span>01</span>
+
         <h3>BROWSE</h3>
-        <p>Explore the premium collection.</p>
+
+        <p>
+          Explore the premium selection.
+        </p>
+
       </div>
 
       <div class="step">
+
         <span>02</span>
+
         <h3>INQUIRE</h3>
-        <p>Connect privately through WhatsApp.</p>
+
+        <p>
+          Connect through WhatsApp or Telegram.
+        </p>
+
       </div>
 
       <div class="step">
+
         <span>03</span>
+
         <h3>CONFIRM</h3>
-        <p>Finalize secure coordination.</p>
+
+        <p>
+          Finalize secure coordination.
+        </p>
+
       </div>
 
       <div class="step">
+
         <span>04</span>
+
         <h3>DELIVERY</h3>
-        <p>Professional and discreet execution.</p>
+
+        <p>
+          Premium discreet execution.
+        </p>
+
       </div>
+
+    </div>
+
+  </section>
+
+  <!-- CRYPTO -->
+
+  <section class="crypto">
+
+    <div class="section-title">
+      CRYPTO PAYMENTS
+    </div>
+
+    <div class="crypto-icons">
+
+      <i class="fa-brands fa-bitcoin"></i>
+      <i class="fa-brands fa-ethereum"></i>
+      <i class="fa-solid fa-coins"></i>
+      <i class="fa-solid fa-wallet"></i>
 
     </div>
 
@@ -274,7 +297,7 @@
 
   <!-- CONTACT -->
 
-  <section class="contact">
+  <section class="contact" id="contact">
 
     <div class="section-title">
       ENTER THE NETWORK
@@ -283,12 +306,22 @@
     <div class="contact-box">
 
       <h3>WhatsApp</h3>
-      <p>+237 692 512 523</p>
 
-      <h3>Email</h3>
-      <p>support@thekitchendxb.com</p>
+      <p>
+        +237 652 172 270
+      </p>
 
-      <a href="#" class="gold-btn">
+      <h3>Telegram</h3>
+
+      <p>
+        @mawjud126
+      </p>
+
+      <a
+        href="https://wa.me/237652172270"
+        target="_blank"
+        class="gold-btn"
+      >
         CONTACT NOW
       </a>
 
@@ -296,25 +329,45 @@
 
   </section>
 
+  <!-- FLOATING BUTTON -->
+
+  <a
+    href="https://wa.me/237652172270"
+    target="_blank"
+    class="floating-whatsapp"
+  >
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
   <!-- FOOTER -->
 
   <footer>
 
-    <div class="footer-logo">
-      THE KITCHEN DXB
-    </div>
+    <img
+      src="assets/logo.png"
+      class="footer-logo"
+    >
 
     <p>
-      Premium Selection • Discreet Service
+      PREMIUM SELECTION • DISCREET SERVICE
     </p>
 
-    <p class="copyright">
-      © 2026 THE KITCHEN DXB. All rights reserved.
-    </p>
+    <div class="footer-socials">
+
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-telegram"></i>
+      <i class="fa-brands fa-whatsapp"></i>
+
+    </div>
+
+    <span>
+      © 2026 THE KITCHEN DXB
+    </span>
 
   </footer>
 
   <script src="script.js"></script>
 
 </body>
+
 </html>
