@@ -382,3 +382,371 @@ footer p{
   }
 
 }
+/* LOGO IMAGE */
+
+.logo img{
+  width:140px;
+}
+
+/* HERO LOGO */
+
+.hero-logo-container{
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.hero-logo{
+  width:550px;
+  max-width:100%;
+  position:relative;
+  z-index:2;
+
+  animation:floatLogo 5s ease-in-out infinite;
+}
+
+/* GLOW RING */
+
+.glow-ring{
+  position:absolute;
+  width:500px;
+  height:500px;
+  border-radius:50%;
+
+  background:
+    radial-gradient(circle,
+    rgba(212,175,55,0.35),
+    transparent 70%);
+
+  filter:blur(25px);
+
+  animation:pulseGlow 4s infinite;
+}
+
+/* FLOATING EFFECT */
+
+@keyframes floatLogo{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-15px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+
+}
+
+/* GLOW PULSE */
+
+@keyframes pulseGlow{
+
+  0%{
+    transform:scale(1);
+    opacity:0.7;
+  }
+
+  50%{
+    transform:scale(1.08);
+    opacity:1;
+  }
+
+  100%{
+    transform:scale(1);
+    opacity:0.7;
+  }
+
+}
+
+/* FLOATING WHATSAPP */
+
+.floating-whatsapp{
+
+  position:fixed;
+
+  bottom:30px;
+  right:30px;
+
+  background:
+    linear-gradient(to right,
+    #d4af37,
+    #f3d27a);
+
+  color:#000;
+
+  padding:18px 24px;
+
+  border-radius:50px;
+
+  text-decoration:none;
+
+  font-weight:700;
+
+  z-index:9999;
+
+  box-shadow:
+    0 0 20px rgba(212,175,55,0.5);
+
+  animation:whatsappPulse 2s infinite;
+
+}
+
+/* WHATSAPP ANIMATION */
+
+@keyframes whatsappPulse{
+
+  0%{
+    transform:scale(1);
+  }
+
+  50%{
+    transform:scale(1.08);
+  }
+
+  100%{
+    transform:scale(1);
+  }
+
+}
+
+/* PREMIUM CARD EFFECTS */
+
+.product-card,
+.category-card,
+.feature-box,
+.step,
+.contact-box{
+
+  backdrop-filter:blur(10px);
+
+  box-shadow:
+    0 0 25px rgba(212,175,55,0.05);
+
+}
+
+/* GOLD HOVER */
+
+.product-card:hover,
+.category-card:hover{
+
+  box-shadow:
+    0 0 35px rgba(212,175,55,0.2);
+
+}
+
+/* HERO ATMOSPHERE */
+
+.hero::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+    radial-gradient(circle at top,
+    rgba(212,175,55,0.08),
+    transparent 60%);
+
+  pointer-events:none;
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .hero-logo{
+    width:320px;
+  }
+
+  .glow-ring{
+    width:280px;
+    height:280px;
+  }
+
+  .floating-whatsapp{
+    right:15px;
+    bottom:15px;
+    padding:14px 18px;
+    font-size:14px;
+  }
+
+}/* LOADER */
+
+#loader{
+
+  position:fixed;
+
+  inset:0;
+
+  background:#000;
+
+  display:flex;
+
+  justify-content:center;
+  align-items:center;
+
+  z-index:999999;
+
+  transition:1s ease;
+
+}
+
+.loader-logo{
+
+  width:220px;
+
+  animation:loaderPulse 2s infinite;
+
+}
+
+@keyframes loaderPulse{
+
+  0%{
+    transform:scale(1);
+    opacity:0.8;
+  }
+
+  50%{
+    transform:scale(1.08);
+    opacity:1;
+  }
+
+  100%{
+    transform:scale(1);
+    opacity:0.8;
+  }
+
+}
+
+/* SMOKE OVERLAY */
+
+.smoke-overlay{
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+    radial-gradient(circle at top left,
+    rgba(255,255,255,0.04),
+    transparent 40%),
+
+    radial-gradient(circle at bottom right,
+    rgba(212,175,55,0.05),
+    transparent 40%);
+
+  opacity:0.7;
+
+  animation:smokeMove 12s infinite alternate;
+
+  pointer-events:none;
+
+}
+
+@keyframes smokeMove{
+
+  from{
+    transform:translateX(-20px)
+               translateY(-10px);
+  }
+
+  to{
+    transform:translateX(20px)
+               translateY(10px);
+  }
+
+}
+
+/* TELEGRAM BUTTON */
+
+.telegram-btn{
+
+  padding:16px 30px;
+
+  border-radius:12px;
+
+  background:#111;
+
+  border:1px solid #d4af37;
+
+  color:#d4af37;
+
+  text-decoration:none;
+
+  font-weight:700;
+
+  transition:0.3s;
+
+}
+
+.telegram-btn:hover{
+
+  background:#d4af37;
+  color:#000;
+
+}
+
+/* SOCIAL BUTTONS */
+
+.social-buttons{
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:20px;
+
+  flex-wrap:wrap;
+
+  margin-top:30px;
+
+}
+
+/* SCROLL REVEAL */
+
+.reveal{
+
+  opacity:0;
+
+  transform:translateY(40px);
+
+  transition:1s ease;
+
+}
+
+.reveal.active{
+
+  opacity:1;
+
+  transform:translateY(0);
+
+}
+
+/* CINEMATIC BACKGROUND */
+
+body::before{
+
+  content:"";
+
+  position:fixed;
+
+  inset:0;
+
+  background:
+    radial-gradient(circle at center,
+    rgba(212,175,55,0.03),
+    transparent 60%);
+
+  pointer-events:none;
+
+  z-index:-1;
+
+}
