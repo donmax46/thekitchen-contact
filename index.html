@@ -18,38 +18,10 @@
 
 <body>
 
-  <!-- WEBGL -->
-
-  <canvas id="webgl"></canvas>
-
-  <!-- CUSTOM CURSOR -->
-
-  <div class="cursor"></div>
-  <div class="cursor-blur"></div>
-
-  <!-- INTRO -->
-
-  <div class="intro-screen">
-
-    <img src="assets/logo.png"
-         class="intro-logo">
-
-    <h1>THE KITCHEN DXB</h1>
-
-    <div class="terminal-screen">
-
-      <p>> INITIALIZING PRIVATE NETWORK...</p>
-      <p>> ENCRYPTION ACTIVE</p>
-      <p>> ACCESSING THE KITCHEN DXB</p>
-
-    </div>
-
-  </div>
-
-  <!-- TOPBAR -->
+  <!-- TOP BAR -->
 
   <div class="topbar">
-    PRIVATE ACCESS • PREMIUM NETWORK • GLOBAL DELIVERY
+    PRIVATE ACCESS • PREMIUM SELECTION
   </div>
 
   <!-- NAVBAR -->
@@ -57,100 +29,55 @@
   <header class="navbar">
 
     <div class="logo">
-      <img src="assets/logo.png" alt="THE KITCHEN">
+      THE KITCHEN
     </div>
 
     <nav>
 
       <a href="#">HOME</a>
       <a href="#">SHOP</a>
-      <a href="#">NETWORK</a>
-      <a href="#">ACCESS</a>
+      <a href="#">ABOUT</a>
+      <a href="#">HOW IT WORKS</a>
       <a href="#">CONTACT</a>
 
     </nav>
 
-    <div class="menu-toggle">
-      ☰
-    </div>
+    <a href="#" class="whatsapp-btn">
+      ORDER ON WHATSAPP
+    </a>
 
   </header>
-
-  <!-- CRYPTO TICKER -->
-
-  <div class="crypto-ticker">
-
-    <div class="ticker-track">
-
-      BTC ▲ 108,420 •
-      ETH ▲ 6,210 •
-      PRIVATE NETWORK ACTIVE •
-      GLOBAL ACCESS ENABLED •
-      DISCREET DELIVERY •
-      WHATSAPP & TELEGRAM ORDERS •
-
-    </div>
-
-  </div>
 
   <!-- HERO -->
 
   <section class="hero">
 
-    <video autoplay muted loop playsinline class="hero-video">
-
-      <source src="assets/hero-video.mp4"
-              type="video/mp4">
-
-    </video>
-
-    <div class="video-overlay"></div>
-
-    <div class="smoke-overlay"></div>
-
-    <div class="particles"></div>
-
-    <div class="light-tracker"></div>
-
-    <div class="parallax-layer parallax-1"></div>
-    <div class="parallax-layer parallax-2"></div>
-
     <div class="hero-left">
 
       <p class="mini-title">
-        PRIVATE LUXURY NETWORK
+        PREMIUM SELECTION
       </p>
 
       <h1>
-        DISCREET.<br>
-        GLOBAL.<br>
-        PREMIUM.
+        DISCREET<br>
+        SERVICE.
       </h1>
 
       <p class="hero-description">
 
-        Curated access, premium products,
-        global coordination and elite service
-        through trusted private networks.
+        Curated premium products delivered with quality,
+        professionalism and trust through private networks.
 
       </p>
 
       <div class="hero-buttons">
 
-        <a href="https://wa.me/237652172270"
-           target="_blank"
-           class="gold-btn magnetic">
-
-          ORDER ON WHATSAPP
-
+        <a href="#" class="gold-btn">
+          BROWSE PRODUCTS
         </a>
 
-        <a href="https://t.me/gcccannabis"
-           target="_blank"
-           class="outline-btn magnetic">
-
-          ORDER ON TELEGRAM
-
+        <a href="#" class="outline-btn">
+          ORDER ON WHATSAPP
         </a>
 
       </div>
@@ -159,12 +86,21 @@
 
     <div class="hero-right">
 
-      <div class="hero-logo-container">
+      <div class="logo-circle">
 
-        <div class="glow-ring"></div>
+        <div class="logo-inner">
 
-        <img src="assets/logo.png"
-             class="hero-logo">
+          <h2>THE</h2>
+
+          <h1>KITCHEN</h1>
+
+          <p>DXB</p>
+
+          <span>
+            PREMIUM SELECTION • DISCREET SERVICE
+          </span>
+
+        </div>
 
       </div>
 
@@ -174,7 +110,7 @@
 
   <!-- FEATURES -->
 
-  <section class="features reveal">
+  <section class="features">
 
     <div class="feature-box">
       <h3>CRYPTO PAYMENTS</h3>
@@ -182,7 +118,7 @@
     </div>
 
     <div class="feature-box">
-      <h3>GLOBAL DELIVERY</h3>
+      <h3>DISCREET DELIVERY</h3>
       <p>Worldwide Coordination</p>
     </div>
 
@@ -192,55 +128,105 @@
     </div>
 
     <div class="feature-box">
-      <h3>PRIVATE ACCESS</h3>
-      <p>Trusted Network</p>
+      <h3>TRUSTED SERVICE</h3>
+      <p>24/7 Support</p>
     </div>
 
   </section>
 
-  <!-- PRODUCTS -->
+  <!-- CATEGORY SECTION -->
 
-  <section class="products reveal">
+  <section class="categories">
 
     <div class="section-title">
-      FEATURED COLLECTIONS
+      SHOP BY CATEGORY
+    </div>
+
+    <div class="category-grid">
+
+      <div class="category-card">
+        <div class="category-image"></div>
+        <h3>EXOTICS</h3>
+        <p>VIEW PRODUCTS</p>
+      </div>
+
+      <div class="category-card">
+        <div class="category-image"></div>
+        <h3>OILS</h3>
+        <p>VIEW PRODUCTS</p>
+      </div>
+
+      <div class="category-card">
+        <div class="category-image"></div>
+        <h3>ACCESSORIES</h3>
+        <p>VIEW PRODUCTS</p>
+      </div>
+
+      <div class="category-card">
+        <div class="category-image"></div>
+        <h3>COLLECTIONS</h3>
+        <p>VIEW PRODUCTS</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FEATURED PRODUCTS -->
+
+  <section class="products">
+
+    <div class="section-title">
+      FEATURED PRODUCTS
     </div>
 
     <div class="product-grid">
 
-      <div class="product-card hologram">
+      <div class="product-card">
 
         <div class="product-image"></div>
 
-        <h3>GOLD SERIES</h3>
+        <h3>PREMIUM GOLD SERIES</h3>
 
         <p>
-          Premium curated luxury collection.
+          Luxury curated collection with premium quality standards.
         </p>
+
+        <a href="#" class="product-btn">
+          ORDER NOW
+        </a>
 
       </div>
 
-      <div class="product-card hologram">
+      <div class="product-card">
 
         <div class="product-image"></div>
 
-        <h3>PRIVATE ACCESS</h3>
+        <h3>PRIVATE ACCESS COLLECTION</h3>
 
         <p>
-          Exclusive network coordination.
+          Exclusive premium access and discreet coordination.
         </p>
+
+        <a href="#" class="product-btn">
+          ORDER NOW
+        </a>
 
       </div>
 
-      <div class="product-card hologram">
+      <div class="product-card">
 
         <div class="product-image"></div>
 
-        <h3>GLOBAL DELIVERY</h3>
+        <h3>GLOBAL DELIVERY SERIES</h3>
 
         <p>
-          Trusted worldwide execution.
+          Trusted worldwide coordination and premium service.
         </p>
+
+        <a href="#" class="product-btn">
+          ORDER NOW
+        </a>
 
       </div>
 
@@ -248,91 +234,39 @@
 
   </section>
 
-  <!-- DASHBOARD -->
+  <!-- HOW IT WORKS -->
 
-  <section class="dashboard reveal">
+  <section class="how-it-works">
 
-    <div class="dashboard-left">
-
-      <h2>NETWORK STATUS</h2>
-
-      <div class="dashboard-card">
-        <span>GLOBAL ACCESS</span>
-        <strong>ACTIVE</strong>
-      </div>
-
-      <div class="dashboard-card">
-        <span>CRYPTO GATEWAY</span>
-        <strong>ONLINE</strong>
-      </div>
-
-      <div class="dashboard-card">
-        <span>PRIVATE NETWORK</span>
-        <strong>ENCRYPTED</strong>
-      </div>
-
+    <div class="section-title">
+      HOW IT WORKS
     </div>
 
-    <div class="dashboard-right">
+    <div class="steps">
 
-      <div class="inventory-panel">
-
-        <h3>LIVE ACCESS</h3>
-
-        <ul>
-
-          <li>
-            GOLD SERIES
-            <span>AVAILABLE</span>
-          </li>
-
-          <li>
-            PRIVATE COLLECTION
-            <span>LOW STOCK</span>
-          </li>
-
-          <li>
-            VIP NETWORK
-            <span>ACTIVE</span>
-          </li>
-
-        </ul>
-
+      <div class="step">
+        <span>01</span>
+        <h3>BROWSE</h3>
+        <p>Explore the premium collection.</p>
       </div>
 
-    </div>
+      <div class="step">
+        <span>02</span>
+        <h3>INQUIRE</h3>
+        <p>Connect privately through WhatsApp.</p>
+      </div>
 
-  </section>
+      <div class="step">
+        <span>03</span>
+        <h3>CONFIRM</h3>
+        <p>Finalize secure coordination.</p>
+      </div>
 
-  <!-- STORY -->
-
-  <section class="story-section reveal">
-
-    <div class="story-left">
-
-      <h2>
-        BUILT THROUGH<br>
-        CONNECTIONS.
-      </h2>
-
-    </div>
-
-    <div class="story-right">
-
-      <p>
-
-        THE KITCHEN operates through curated
-        global relationships, strategic access,
-        premium coordination and trusted systems.
-
-      </p>
-
-      <p>
-
-        More than a storefront —
-        this is a private ecosystem.
-
-      </p>
+      <div class="step">
+        <span>04</span>
+        <h3>DELIVERY</h3>
+        <p>Professional and discreet execution.</p>
+      </div>
 
     </div>
 
@@ -340,7 +274,7 @@
 
   <!-- CONTACT -->
 
-  <section class="contact reveal">
+  <section class="contact">
 
     <div class="section-title">
       ENTER THE NETWORK
@@ -348,39 +282,15 @@
 
     <div class="contact-box">
 
-      <h3>WHATSAPP</h3>
+      <h3>WhatsApp</h3>
+      <p>+237 692 512 523</p>
 
-      <a href="https://wa.me/237652172270"
-         target="_blank">
+      <h3>Email</h3>
+      <p>support@thekitchendxb.com</p>
 
-        +237 652 172 270
-
+      <a href="#" class="gold-btn">
+        CONTACT NOW
       </a>
-
-      <h3>TELEGRAM</h3>
-
-      <a href="https://t.me/gcccannabis"
-         target="_blank">
-
-        @gcccannabis
-
-      </a>
-
-    </div>
-
-  </section>
-
-  <!-- VAULT -->
-
-  <section class="hidden-vault">
-
-    <div class="vault-content">
-
-      <h2>ACCESS RESTRICTED</h2>
-
-      <p>
-        Hidden gateway initialized.
-      </p>
 
     </div>
 
@@ -395,33 +305,14 @@
     </div>
 
     <p>
-      Premium Selection • Private Network
+      Premium Selection • Discreet Service
+    </p>
+
+    <p class="copyright">
+      © 2026 THE KITCHEN DXB. All rights reserved.
     </p>
 
   </footer>
-
-  <!-- FLOATING WHATSAPP -->
-
-  <a href="https://wa.me/237652172270"
-     class="floating-whatsapp"
-     target="_blank">
-
-    WHATSAPP
-
-  </a>
-
-  <!-- AUDIO -->
-
-  <audio autoplay loop id="bg-audio">
-
-    <source src="assets/ambience.mp3"
-            type="audio/mpeg">
-
-  </audio>
-
-  <!-- THREE JS -->
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
   <script src="script.js"></script>
 
