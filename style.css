@@ -749,3 +749,52 @@ body::before{
   z-index:-1;
 
 }
+/* CATEGORY IMAGES */
+
+.category-image.exotics{
+  background:
+    linear-gradient(rgba(0,0,0,0.3),
+    rgba(0,0,0,0.5)),
+    url('assets/exotics.jpg')
+    center/cover no-repeat;
+}
+
+.category-image.oils{
+  background:
+    linear-gradient(rgba(0,0,0,0.3),
+    rgba(0,0,0,0.5)),
+    url('assets/oils.jpg')
+    center/cover no-repeat;
+}
+
+.category-image.vapes{
+  background:
+    linear-gradient(rgba(0,0,0,0.3),
+    rgba(0,0,0,0.5)),
+    url('assets/vapes.jpg')
+    center/cover no-repeat;
+}
+
+.category-image.hashish{
+  background:
+    linear-gradient(rgba(0,0,0,0.3),
+    rgba(0,0,0,0.5)),
+    url('assets/hashish.jpg')
+    center/cover no-repeat;
+}
+
+.category-image.accessories{
+  background:
+    linear-gradient(rgba(0,0,0,0.3),
+    rgba(0,0,0,0.5)),
+    url('assets/accessories.jpg')
+    center/cover no-repeat;
+}
+
+.category-image.edibles{
+  background:
+    linear-gradient(rgba(0,0,0,0.3),
+    rgba(0,0,0,0.5)),
+    url('assets/edibles.jpg')
+    center/cover no-repeat;
+}
