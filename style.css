@@ -242,12 +242,11 @@ section{
   border-color:#d4af37;
 }
 
-.category-image,
-.product-image{
-  height:240px;
+.category-image.exotics{
   background:
-    linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5)),
-    url('https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1974&auto=format&fit=crop')
+    linear-gradient(rgba(0,0,0,0.3),
+    rgba(0,0,0,0.5)),
+    url('assets/exotics.jpg')
     center/cover no-repeat;
 }
 
