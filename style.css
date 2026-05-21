@@ -240,13 +240,63 @@ section{
 .product-card:hover{
   transform:translateY(-8px);
   border-color:#d4af37;
-}
+/* EXOTICS */
 
 .category-image.exotics{
   background:
     linear-gradient(rgba(0,0,0,0.3),
     rgba(0,0,0,0.5)),
     url('assets/exotics.jpg')
+    center/cover no-repeat;
+}
+
+/* OILS */
+
+.category-image.oils{
+  background:
+    linear-gradient(rgba(0,0,0,0.3),
+    rgba(0,0,0,0.5)),
+    url('assets/oils.jpg')
+    center/cover no-repeat;
+}
+
+/* VAPES */
+
+.category-image.vapes{
+  background:
+    linear-gradient(rgba(0,0,0,0.3),
+    rgba(0,0,0,0.5)),
+    url('assets/vapes.jpg')
+    center/cover no-repeat;
+}
+
+/* HASHISH */
+
+.category-image.hashish{
+  background:
+    linear-gradient(rgba(0,0,0,0.3),
+    rgba(0,0,0,0.5)),
+    url('assets/hashish.jpg')
+    center/cover no-repeat;
+}
+
+/* ACCESSORIES */
+
+.category-image.accessories{
+  background:
+    linear-gradient(rgba(0,0,0,0.3),
+    rgba(0,0,0,0.5)),
+    url('assets/accessories.jpg')
+    center/cover no-repeat;
+}
+
+/* EDIBLES */
+
+.category-image.edibles{
+  background:
+    linear-gradient(rgba(0,0,0,0.3),
+    rgba(0,0,0,0.5)),
+    url('assets/edibles.jpg')
     center/cover no-repeat;
 }
 
