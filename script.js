@@ -1,11 +1,13 @@
-/* NAVBAR */
+/* =========================
+   NAVBAR BACKGROUND
+========================= */
 
 window.addEventListener("scroll", () => {
 
   const navbar =
   document.querySelector(".navbar");
 
-  if(window.scrollY > 50){
+  if(window.scrollY > 40){
 
     navbar.style.background =
     "rgba(0,0,0,0.88)";
@@ -19,7 +21,9 @@ window.addEventListener("scroll", () => {
 
 });
 
-/* LOADER */
+/* =========================
+   LOADER
+========================= */
 
 window.addEventListener("load", () => {
 
@@ -36,11 +40,13 @@ window.addEventListener("load", () => {
 
     },1000);
 
-  },1600);
+  },1400);
 
 });
 
-/* MOBILE MENU */
+/* =========================
+   MOBILE MENU
+========================= */
 
 const menuToggle =
 document.getElementById("menuToggle");
@@ -54,7 +60,26 @@ menuToggle.addEventListener("click", () => {
 
 });
 
-/* CUSTOM CURSOR */
+/* =========================
+   CLOSE MENU ON CLICK
+========================= */
+
+const navLinks =
+document.querySelectorAll("#mobileNav a");
+
+navLinks.forEach((link) => {
+
+  link.addEventListener("click", () => {
+
+    mobileNav.classList.remove("active");
+
+  });
+
+});
+
+/* =========================
+   CUSTOM CURSOR
+========================= */
 
 const cursor =
 document.querySelector(".custom-cursor");
@@ -69,45 +94,13 @@ document.addEventListener("mousemove", (e) => {
 
 });
 
-/* MAGNETIC BUTTON FEEL */
-
-const buttons =
-document.querySelectorAll(
-  ".gold-btn, .outline-btn, .telegram-btn"
-);
-
-buttons.forEach((btn) => {
-
-  btn.addEventListener("mousemove", (e) => {
-
-    const rect =
-    btn.getBoundingClientRect();
-
-    const x =
-    e.clientX - rect.left - rect.width / 2;
-
-    const y =
-    e.clientY - rect.top - rect.height / 2;
-
-    btn.style.transform =
-    `translate(${x * 0.12}px,
-               ${y * 0.12}px)`;
-
-  });
-
-  btn.addEventListener("mouseleave", () => {
-
-    btn.style.transform =
-    "translate(0,0)";
-
-  });
-
-});
-/* SMOOTH SECTION REVEAL */
+/* =========================
+   REVEAL ON SCROLL
+========================= */
 
 const revealItems =
 document.querySelectorAll(
-  ".category-card, .product-card, .step"
+  ".feature-box, .category-card, .product-card, .step"
 );
 
 const revealOnScroll = () => {
@@ -148,3 +141,40 @@ window.addEventListener(
 );
 
 revealOnScroll();
+
+/* =========================
+   BUTTON HOVER MOTION
+========================= */
+
+const buttons =
+document.querySelectorAll(
+  ".gold-btn, .telegram-btn, .product-btn"
+);
+
+buttons.forEach((btn) => {
+
+  btn.addEventListener("mousemove", (e) => {
+
+    const rect =
+    btn.getBoundingClientRect();
+
+    const x =
+    e.clientX - rect.left - rect.width / 2;
+
+    const y =
+    e.clientY - rect.top - rect.height / 2;
+
+    btn.style.transform =
+    `translate(${x * 0.08}px,
+               ${y * 0.08}px)`;
+
+  });
+
+  btn.addEventListener("mouseleave", () => {
+
+    btn.style.transform =
+    "translate(0,0)";
+
+  });
+
+});
