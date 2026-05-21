@@ -1429,4 +1429,212 @@ body::before{
 
   left:120%;
 
+/* =========================
+   V7 REFINEMENT
+========================= */
+
+/* SMALLER LOGO */
+
+.logo img{
+  width:78px;
+  opacity:0.92;
+}
+
+/* HERO ATMOSPHERE */
+
+.hero-right{
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+}
+
+.hero-atmosphere{
+
+  position:relative;
+
+  width:420px;
+  height:420px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+}
+
+/* SMALLER EMBLEM */
+
+.hero-emblem{
+
+  width:240px;
+
+  opacity:0.82;
+
+  position:relative;
+
+  z-index:2;
+
+  animation:
+    floatLogo 8s ease-in-out infinite;
+
+}
+
+/* AMBIENT LIGHT */
+
+.ambient-glow{
+
+  position:absolute;
+
+  width:100%;
+  height:100%;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(circle,
+    rgba(212,175,55,0.18),
+    transparent 70%);
+
+  filter:blur(30px);
+
+  animation:
+    glowPulse 6s infinite alternate;
+
+}
+
+@keyframes glowPulse{
+
+  from{
+
+    transform:scale(1);
+    opacity:0.5;
+
+  }
+
+  to{
+
+    transform:scale(1.12);
+    opacity:0.9;
+
+  }
+
+}
+
+/* REMOVE OVERCROWDING */
+
+.hero-buttons{
+
+  margin-top:20px;
+
+}
+
+/* CLEAN BUTTON */
+
+.gold-btn{
+
+  min-width:220px;
+
+  text-align:center;
+
+}
+
+/* BETTER NAVBAR SPACING */
+
+.navbar{
+
+  padding:18px 7%;
+
+}
+
+/* NAV LINKS */
+
+#mobileNav a{
+
+  position:relative;
+
+}
+
+#mobileNav a::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  bottom:-6px;
+
+  width:0%;
+
+  height:1px;
+
+  background:#d4af37;
+
+  transition:0.3s;
+
+}
+
+#mobileNav a:hover::after{
+
+  width:100%;
+
+}
+
+/* CLEANER MOBILE */
+
+@media(max-width:950px){
+
+  .hero{
+
+    padding-top:120px;
+
+  }
+
+  .hero-emblem{
+
+    width:180px;
+
+    margin-bottom:20px;
+
+  }
+
+  .hero-atmosphere{
+
+    width:260px;
+    height:260px;
+
+  }
+
+  .hero-left h1{
+
+    font-size:3.2rem;
+
+  }
+
+  .hero-description{
+
+    font-size:0.95rem;
+
+    line-height:1.7;
+
+  }
+
+  .gold-btn{
+
+    min-width:unset;
+
+    width:100%;
+
+  }
+
+}
+
+/* REMOVE CURSOR ON MOBILE */
+
+@media(max-width:768px){
+
+  .custom-cursor{
+    display:none;
+  }
+
 }
