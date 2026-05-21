@@ -103,3 +103,48 @@ buttons.forEach((btn) => {
   });
 
 });
+/* SMOOTH SECTION REVEAL */
+
+const revealItems =
+document.querySelectorAll(
+  ".category-card, .product-card, .step"
+);
+
+const revealOnScroll = () => {
+
+  revealItems.forEach((item) => {
+
+    const top =
+    item.getBoundingClientRect().top;
+
+    if(top < window.innerHeight - 80){
+
+      item.style.opacity = "1";
+
+      item.style.transform =
+      "translateY(0px)";
+
+    }
+
+  });
+
+};
+
+revealItems.forEach((item) => {
+
+  item.style.opacity = "0";
+
+  item.style.transform =
+  "translateY(40px)";
+
+  item.style.transition =
+  "all 1s ease";
+
+});
+
+window.addEventListener(
+  "scroll",
+  revealOnScroll
+);
+
+revealOnScroll();
