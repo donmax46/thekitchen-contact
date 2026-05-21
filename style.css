@@ -1,180 +1,1036 @@
 /* =========================
-   NAVBAR BACKGROUND
+   RESET
 ========================= */
 
-window.addEventListener("scroll", () => {
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-  const navbar =
-  document.querySelector(".navbar");
+html{
+  scroll-behavior:smooth;
+}
 
-  if(window.scrollY > 40){
+body{
 
-    navbar.style.background =
-    "rgba(0,0,0,0.88)";
+  background:#050505;
 
-  } else {
+  color:#fff;
 
-    navbar.style.background =
-    "rgba(0,0,0,0.45)";
+  font-family:'Inter',sans-serif;
 
-  }
+  overflow-x:hidden;
 
-});
+  position:relative;
+
+}
 
 /* =========================
-   LOADER
+   FILM GRAIN
 ========================= */
 
-window.addEventListener("load", () => {
+.film-grain{
 
-  const loader =
-  document.getElementById("loader");
+  position:fixed;
 
-  setTimeout(() => {
+  inset:0;
 
-    loader.style.opacity = "0";
+  pointer-events:none;
 
-    setTimeout(() => {
+  opacity:0.03;
 
-      loader.style.display = "none";
+  z-index:9999;
 
-    },1000);
+  background-image:
+    url("https://grainy-gradients.vercel.app/noise.svg");
 
-  },1400);
+  mix-blend-mode:soft-light;
 
-});
-
-/* =========================
-   MOBILE MENU
-========================= */
-
-const menuToggle =
-document.getElementById("menuToggle");
-
-const mobileNav =
-document.getElementById("mobileNav");
-
-menuToggle.addEventListener("click", () => {
-
-  mobileNav.classList.toggle("active");
-
-});
-
-/* =========================
-   CLOSE MENU ON CLICK
-========================= */
-
-const navLinks =
-document.querySelectorAll("#mobileNav a");
-
-navLinks.forEach((link) => {
-
-  link.addEventListener("click", () => {
-
-    mobileNav.classList.remove("active");
-
-  });
-
-});
+}
 
 /* =========================
    CUSTOM CURSOR
 ========================= */
 
-const cursor =
-document.querySelector(".custom-cursor");
+.custom-cursor{
 
-document.addEventListener("mousemove", (e) => {
+  width:18px;
+  height:18px;
 
-  cursor.style.left =
-  e.clientX + "px";
+  border:1px solid #d4af37;
 
-  cursor.style.top =
-  e.clientY + "px";
+  border-radius:50%;
 
-});
+  position:fixed;
 
-/* =========================
-   REVEAL ON SCROLL
-========================= */
+  top:0;
+  left:0;
 
-const revealItems =
-document.querySelectorAll(
-  ".feature-box, .category-card, .product-card, .step"
-);
+  transform:translate(-50%,-50%);
 
-const revealOnScroll = () => {
+  pointer-events:none;
 
-  revealItems.forEach((item) => {
+  z-index:99999;
 
-    const top =
-    item.getBoundingClientRect().top;
+  box-shadow:
+    0 0 15px rgba(212,175,55,0.4);
 
-    if(top < window.innerHeight - 80){
-
-      item.style.opacity = "1";
-
-      item.style.transform =
-      "translateY(0px)";
-
-    }
-
-  });
-
-};
-
-revealItems.forEach((item) => {
-
-  item.style.opacity = "0";
-
-  item.style.transform =
-  "translateY(40px)";
-
-  item.style.transition =
-  "all 1s ease";
-
-});
-
-window.addEventListener(
-  "scroll",
-  revealOnScroll
-);
-
-revealOnScroll();
+}
 
 /* =========================
-   BUTTON HOVER MOTION
+   LOADER
 ========================= */
 
-const buttons =
-document.querySelectorAll(
-  ".gold-btn, .telegram-btn, .product-btn"
-);
+#loader{
 
-buttons.forEach((btn) => {
+  position:fixed;
 
-  btn.addEventListener("mousemove", (e) => {
+  inset:0;
 
-    const rect =
-    btn.getBoundingClientRect();
+  background:#000;
 
-    const x =
-    e.clientX - rect.left - rect.width / 2;
+  display:flex;
 
-    const y =
-    e.clientY - rect.top - rect.height / 2;
+  justify-content:center;
+  align-items:center;
 
-    btn.style.transform =
-    `translate(${x * 0.08}px,
-               ${y * 0.08}px)`;
+  z-index:999999;
 
-  });
+  transition:1s ease;
 
-  btn.addEventListener("mouseleave", () => {
+}
 
-    btn.style.transform =
-    "translate(0,0)";
+.loader-logo{
 
-  });
+  width:170px;
 
-});
+  animation:
+    loaderPulse 2s infinite;
+
+}
+
+@keyframes loaderPulse{
+
+  0%{
+    transform:scale(1);
+    opacity:0.7;
+  }
+
+  50%{
+    transform:scale(1.05);
+    opacity:1;
+  }
+
+  100%{
+    transform:scale(1);
+    opacity:0.7;
+  }
+
+}
+
+/* =========================
+   TOPBAR
+========================= */
+
+.topbar{
+
+  text-align:center;
+
+  padding:10px;
+
+  font-size:11px;
+
+  letter-spacing:4px;
+
+  color:#d4af37;
+
+  border-bottom:
+    1px solid rgba(212,175,55,0.08);
+
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+
+  position:fixed;
+
+  top:0;
+
+  width:100%;
+
+  height:90px;
+
+  padding:0 7%;
+
+  display:flex;
+
+  justify-content:space-between;
+  align-items:center;
+
+  z-index:999;
+
+  backdrop-filter:blur(14px);
+
+  background:
+    rgba(0,0,0,0.45);
+
+  border-bottom:
+    1px solid rgba(212,175,55,0.05);
+
+}
+
+.logo img{
+  width:78px;
+}
+
+#mobileNav{
+
+  display:flex;
+
+  gap:35px;
+
+}
+
+#mobileNav a{
+
+  color:#fff;
+
+  text-decoration:none;
+
+  font-size:14px;
+
+  position:relative;
+
+  transition:0.3s;
+
+}
+
+#mobileNav a:hover{
+  color:#d4af37;
+}
+
+#mobileNav a::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  bottom:-5px;
+
+  width:0%;
+
+  height:1px;
+
+  background:#d4af37;
+
+  transition:0.3s;
+
+}
+
+#mobileNav a:hover::after{
+  width:100%;
+}
+
+.menu-toggle{
+
+  display:none;
+
+  color:#d4af37;
+
+  font-size:2rem;
+
+  cursor:pointer;
+
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+  position:relative;
+
+  min-height:100vh;
+
+  padding:
+    140px 7% 100px;
+
+  display:grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  align-items:center;
+
+  gap:60px;
+
+}
+
+.hero-left{
+  z-index:2;
+}
+
+.mini-title{
+
+  color:#d4af37;
+
+  letter-spacing:7px;
+
+  font-size:13px;
+
+  opacity:0.8;
+
+  margin-bottom:20px;
+
+}
+
+.hero-left h1{
+
+  font-size:5.5rem;
+
+  line-height:0.92;
+
+  letter-spacing:-2px;
+
+  margin-bottom:25px;
+
+}
+
+.hero-description{
+
+  max-width:520px;
+
+  color:#b5b5b5;
+
+  line-height:1.9;
+
+  margin-bottom:40px;
+
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.gold-btn,
+.telegram-btn,
+.product-btn{
+
+  display:inline-flex;
+
+  justify-content:center;
+  align-items:center;
+
+  text-decoration:none;
+
+  font-weight:600;
+
+  border-radius:12px;
+
+  transition:0.35s ease;
+
+}
+
+.gold-btn{
+
+  background:
+    linear-gradient(
+    to right,
+    #d4af37,
+    #f3d27a);
+
+  color:#000;
+
+  padding:15px 28px;
+
+}
+
+.gold-btn:hover{
+
+  transform:translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(212,175,55,0.22);
+
+}
+
+.telegram-btn{
+
+  padding:15px 28px;
+
+  border:1px solid #d4af37;
+
+  color:#d4af37;
+
+}
+
+.telegram-btn:hover{
+
+  background:#d4af37;
+
+  color:#000;
+
+}
+
+.product-btn{
+
+  margin:0 25px 25px;
+
+  padding:14px 20px;
+
+  background:#d4af37;
+
+  color:#000;
+
+}
+
+/* =========================
+   HERO RIGHT
+========================= */
+
+.hero-right{
+
+  display:flex;
+
+  justify-content:center;
+  align-items:center;
+
+}
+
+.cinematic-light{
+
+  position:relative;
+
+  width:500px;
+  height:500px;
+
+}
+
+.ambient-glow{
+
+  position:absolute;
+
+  inset:0;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(circle,
+    rgba(212,175,55,0.14),
+    transparent 70%);
+
+  filter:blur(40px);
+
+  animation:
+    glowBreath 8s infinite alternate;
+
+}
+
+@keyframes glowBreath{
+
+  from{
+    transform:scale(1);
+    opacity:0.45;
+  }
+
+  to{
+    transform:scale(1.12);
+    opacity:0.8;
+  }
+
+}
+
+/* =========================
+   LIGHT ORBS
+========================= */
+
+.light-orb{
+
+  position:absolute;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(circle,
+    rgba(212,175,55,0.18),
+    transparent 70%);
+
+  filter:blur(15px);
+
+}
+
+.orb-1{
+
+  width:180px;
+  height:180px;
+
+  top:60px;
+  left:50px;
+
+}
+
+.orb-2{
+
+  width:140px;
+  height:140px;
+
+  bottom:80px;
+  right:80px;
+
+}
+
+.orb-3{
+
+  width:100px;
+  height:100px;
+
+  top:220px;
+  right:100px;
+
+}
+
+/* =========================
+   SMOKE
+========================= */
+
+.smoke-overlay{
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+    radial-gradient(circle at top left,
+    rgba(255,255,255,0.03),
+    transparent 40%),
+
+    radial-gradient(circle at bottom right,
+    rgba(212,175,55,0.04),
+    transparent 40%);
+
+  pointer-events:none;
+
+}
+
+.smoke-layer{
+
+  position:absolute;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(circle,
+    rgba(212,175,55,0.14),
+    transparent 70%);
+
+  filter:blur(60px);
+
+}
+
+.smoke-1{
+
+  width:240px;
+  height:240px;
+
+  top:70px;
+  left:40px;
+
+}
+
+.smoke-2{
+
+  width:180px;
+  height:180px;
+
+  bottom:60px;
+  right:50px;
+
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+  padding:100px 7%;
+}
+
+.section-title{
+
+  text-align:center;
+
+  font-size:2rem;
+
+  color:#d4af37;
+
+  margin-bottom:60px;
+
+  font-family:'Cinzel',serif;
+
+}
+
+/* =========================
+   FEATURES
+========================= */
+
+.features{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+  gap:25px;
+
+}
+
+.feature-box{
+
+  background:#0c0c0c;
+
+  border:
+    1px solid rgba(212,175,55,0.08);
+
+  border-radius:24px;
+
+  padding:35px;
+
+  text-align:center;
+
+}
+
+.feature-box h3{
+
+  color:#d4af37;
+
+  margin-bottom:10px;
+
+}
+
+/* =========================
+   CATEGORY GRID
+========================= */
+
+.category-grid,
+.product-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(auto-fit,minmax(260px,1fr));
+
+  gap:30px;
+
+}
+
+.category-card,
+.product-card{
+
+  position:relative;
+
+  overflow:hidden;
+
+  border-radius:24px;
+
+  background:#0b0b0b;
+
+  border:
+    1px solid rgba(212,175,55,0.08);
+
+  transition:0.4s ease;
+
+}
+
+.category-card:hover,
+.product-card:hover{
+
+  transform:
+    translateY(-8px);
+
+  box-shadow:
+    0 0 30px rgba(212,175,55,0.12);
+
+}
+
+/* =========================
+   CATEGORY IMAGES
+========================= */
+
+.category-image,
+.product-image{
+
+  height:240px;
+
+}
+
+/* EXOTICS */
+
+.category-image.exotics{
+
+  background:
+    linear-gradient(rgba(0,0,0,0.3),
+    rgba(0,0,0,0.5)),
+    url('assets/exotics.jpg')
+    center/cover no-repeat;
+
+}
+
+/* OILS */
+
+.category-image.oils{
+
+  background:
+    linear-gradient(rgba(0,0,0,0.3),
+    rgba(0,0,0,0.5)),
+    url('assets/oils.jpg')
+    center/cover no-repeat;
+
+}
+
+/* VAPES */
+
+.category-image.vapes{
+
+  background:
+    linear-gradient(rgba(0,0,0,0.3),
+    rgba(0,0,0,0.5)),
+    url('assets/vapes.jpg')
+    center/cover no-repeat;
+
+}
+
+/* HASHISH */
+
+.category-image.hashish{
+
+  background:
+    linear-gradient(rgba(0,0,0,0.3),
+    rgba(0,0,0,0.5)),
+    url('assets/hashish.jpg')
+    center/cover no-repeat;
+
+}
+
+/* ACCESSORIES */
+
+.category-image.accessories{
+
+  background:
+    linear-gradient(rgba(0,0,0,0.3),
+    rgba(0,0,0,0.5)),
+    url('assets/accessories.jpg')
+    center/cover no-repeat;
+
+}
+
+/* EDIBLES */
+
+.category-image.edibles{
+
+  background:
+    linear-gradient(rgba(0,0,0,0.3),
+    rgba(0,0,0,0.5)),
+    url('assets/edibles.jpg')
+    center/cover no-repeat;
+
+}
+
+/* PRODUCT IMAGE */
+
+.product-image{
+
+  background:
+    radial-gradient(circle at top left,
+    rgba(212,175,55,0.2),
+    transparent 35%),
+
+    linear-gradient(
+    135deg,
+    #050505,
+    #101010,
+    #050505);
+
+}
+
+/* =========================
+   CARD TEXT
+========================= */
+
+.category-card h3,
+.product-card h3{
+
+  padding:25px 25px 10px;
+
+  color:#f5d98a;
+
+}
+
+.category-card p,
+.product-card p{
+
+  padding:0 25px 25px;
+
+  color:#aaa;
+
+  line-height:1.7;
+
+}
+
+/* =========================
+   HOW IT WORKS
+========================= */
+
+.steps{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+  gap:25px;
+
+}
+
+.step{
+
+  background:#0c0c0c;
+
+  border:
+    1px solid rgba(212,175,55,0.08);
+
+  border-radius:24px;
+
+  padding:40px;
+
+}
+
+.step span{
+
+  color:#d4af37;
+
+  font-size:2rem;
+
+  font-weight:700;
+
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-box{
+
+  max-width:700px;
+
+  margin:auto;
+
+  background:#0c0c0c;
+
+  border:
+    1px solid rgba(212,175,55,0.08);
+
+  border-radius:28px;
+
+  padding:60px;
+
+  text-align:center;
+
+}
+
+.social-buttons{
+
+  display:flex;
+
+  justify-content:center;
+
+  gap:20px;
+
+  flex-wrap:wrap;
+
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+  text-align:center;
+
+  padding:60px 20px;
+
+  border-top:
+    1px solid rgba(255,255,255,0.05);
+
+}
+
+.footer-logo{
+
+  font-size:2rem;
+
+  color:#d4af37;
+
+  font-family:'Cinzel',serif;
+
+  margin-bottom:15px;
+
+}
+
+.copyright{
+
+  margin-top:20px;
+
+  color:#777;
+
+  font-size:13px;
+
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+  width:10px;
+}
+
+::-webkit-scrollbar-track{
+  background:#050505;
+}
+
+::-webkit-scrollbar-thumb{
+
+  background:
+    linear-gradient(
+    #d4af37,
+    #f3d27a);
+
+  border-radius:20px;
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:950px){
+
+  .hero{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+    padding-top:130px;
+
+  }
+
+  .hero-right{
+    order:-1;
+  }
+
+  .hero-left h1{
+    font-size:4rem;
+  }
+
+  .hero-description{
+    margin:auto auto 35px;
+  }
+
+  .hero-buttons{
+    justify-content:center;
+  }
+
+  .cinematic-light{
+
+    width:260px;
+    height:260px;
+
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+  #mobileNav{
+
+    position:fixed;
+
+    top:0;
+    right:-100%;
+
+    width:260px;
+    height:100vh;
+
+    background:
+      rgba(0,0,0,0.96);
+
+    backdrop-filter:blur(20px);
+
+    flex-direction:column;
+
+    padding:120px 40px;
+
+    transition:0.4s ease;
+
+  }
+
+  #mobileNav.active{
+    right:0;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .custom-cursor{
+    display:none;
+  }
+
+  .navbar{
+
+    height:78px;
+
+    padding:0 6%;
+
+  }
+
+  .logo img{
+    width:68px;
+  }
+
+  .hero-left h1{
+
+    font-size:3.5rem;
+
+    letter-spacing:-1px;
+
+  }
+
+  .mini-title{
+
+    letter-spacing:5px;
+
+    font-size:12px;
+
+  }
+
+  .hero-description{
+
+    font-size:0.95rem;
+
+    line-height:1.8;
+
+  }
+
+  .contact-box{
+    padding:40px 25px;
+  }
+
+}
