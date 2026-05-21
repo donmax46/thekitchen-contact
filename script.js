@@ -1,16 +1,19 @@
+/* NAVBAR */
+
 window.addEventListener("scroll", () => {
 
-  const navbar = document.querySelector(".navbar");
+  const navbar =
+  document.querySelector(".navbar");
 
   if(window.scrollY > 50){
 
     navbar.style.background =
-    "rgba(0,0,0,0.95)";
+    "rgba(0,0,0,0.88)";
 
   } else {
 
     navbar.style.background =
-    "rgba(0,0,0,0.7)";
+    "rgba(0,0,0,0.45)";
 
   }
 
@@ -33,31 +36,69 @@ window.addEventListener("load", () => {
 
     },1000);
 
-  },1800);
+  },1600);
 
 });
 
-/* SCROLL REVEAL */
+/* MOBILE MENU */
 
-const reveals =
-document.querySelectorAll("section");
+const menuToggle =
+document.getElementById("menuToggle");
 
-window.addEventListener("scroll", () => {
+const mobileNav =
+document.getElementById("mobileNav");
 
-  reveals.forEach((section) => {
+menuToggle.addEventListener("click", () => {
 
-    const windowHeight =
-    window.innerHeight;
+  mobileNav.classList.toggle("active");
 
-    const revealTop =
-    section.getBoundingClientRect().top;
+});
 
-    if(revealTop < windowHeight - 100){
+/* CUSTOM CURSOR */
 
-      section.classList.add("reveal");
-      section.classList.add("active");
+const cursor =
+document.querySelector(".custom-cursor");
 
-    }
+document.addEventListener("mousemove", (e) => {
+
+  cursor.style.left =
+  e.clientX + "px";
+
+  cursor.style.top =
+  e.clientY + "px";
+
+});
+
+/* MAGNETIC BUTTON FEEL */
+
+const buttons =
+document.querySelectorAll(
+  ".gold-btn, .outline-btn, .telegram-btn"
+);
+
+buttons.forEach((btn) => {
+
+  btn.addEventListener("mousemove", (e) => {
+
+    const rect =
+    btn.getBoundingClientRect();
+
+    const x =
+    e.clientX - rect.left - rect.width / 2;
+
+    const y =
+    e.clientY - rect.top - rect.height / 2;
+
+    btn.style.transform =
+    `translate(${x * 0.12}px,
+               ${y * 0.12}px)`;
+
+  });
+
+  btn.addEventListener("mouseleave", () => {
+
+    btn.style.transform =
+    "translate(0,0)";
 
   });
 
