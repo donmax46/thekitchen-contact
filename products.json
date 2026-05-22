@@ -1,29 +1,37 @@
 [
   {
+    "id": "premium-green",
     "name": "Premium Green Collection",
     "price": "$120",
+    "category": "Exotics",
     "image": "assets/product1.jpg",
     "description": "Luxury curated premium collection."
   },
 
   {
+    "id": "neon-oils",
     "name": "Neon Oil Series",
     "price": "$90",
+    "category": "Oils",
     "image": "assets/product2.jpg",
     "description": "High-end premium oil selection."
   },
 
   {
+    "id": "private-kit",
     "name": "Private Access Kit",
     "price": "$150",
+    "category": "Accessories",
     "image": "assets/product3.jpg",
     "description": "Exclusive premium accessory pack."
   },
 
   {
-    "name": "Luxury Disposable Series",
+    "id": "disposable-series",
+    "name": "Disposable Series",
     "price": "$80",
+    "category": "Vapes",
     "image": "assets/product4.jpg",
-    "description": "Premium curated disposable collection."
+    "description": "Premium disposable collection."
   }
 ]
