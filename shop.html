@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8"/>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0"/>
+
+  <title>Shop | THE KITCHEN DXB</title>
+
+  <link rel="stylesheet"
+        href="style.css"/>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="film-grain"></div>
+
+<header class="navbar">
+
+  <div class="logo">
+
+    <img src="assets/logo.png"
+         class="logo-image">
+
+  </div>
+
+  <div class="menu-toggle"
+       id="menu-toggle">
+
+       ☰
+
+  </div>
+
+  <nav id="mobile-nav">
+
+    <a href="index.html">HOME</a>
+
+    <a href="shop.html">SHOP</a>
+
+    <a href="about.html">ABOUT</a>
+
+    <a href="faq.html">FAQ</a>
+
+    <a href="contact.html">CONTACT</a>
+
+  </nav>
+
+</header>
+
+<section class="shop-page">
+
+  <div class="section-title">
+    PREMIUM COLLECTION
+  </div>
+
+  <input type="text"
+         id="searchInput"
+         placeholder="SEARCH PRODUCTS..."
+         class="search-box"
+         onkeyup="searchProducts()">
+
+  <div class="filter-buttons">
+
+    <button onclick="filterProducts('All')">
+      ALL
+    </button>
+
+    <button onclick="filterProducts('Exotics')">
+      EXOTICS
+    </button>
+
+    <button onclick="filterProducts('Oils')">
+      OILS
+    </button>
+
+    <button onclick="filterProducts('Accessories')">
+      ACCESSORIES
+    </button>
+
+    <button onclick="filterProducts('Vapes')">
+      VAPES
+    </button>
+
+  </div>
+
+  <div class="product-grid"
+       id="product-grid">
+
+  </div>
+
+</section>
+
+<div class="product-modal"
+     id="product-modal">
+
+  <div class="modal-box">
+
+    <span class="close-modal"
+          onclick="closeModal()">
+
+          ×
+
+    </span>
+
+    <div id="modal-content"></div>
+
+  </div>
+
+</div>
+
+<section class="contact-section">
+
+  <div class="section-title">
+    CONTACT
+  </div>
+
+  <div class="contact-grid">
+
+    <a href="https://wa.me/237652172270"
+       target="_blank"
+       class="contact-card">
+
+       WHATSAPP
+
+    </a>
+
+    <a href="https://t.me/mawjud126"
+       target="_blank"
+       class="contact-card">
+
+       TELEGRAM
+
+    </a>
+
+  </div>
+
+</section>
+
+<footer>
+
+  <p>
+    © THE KITCHEN DXB
+  </p>
+
+</footer>
+
+<script src="script.js"></script>
+
+<script src="products.js"></script>
+
+</body>
+
+</html>
