@@ -1,11 +1,25 @@
+let allProducts = [];
+
 async function loadProducts(){
 
-  const response = await fetch("products.json");
+  const response =
+  await fetch("products.json");
 
-  const products = await response.json();
+  const products =
+  await response.json();
+
+  allProducts = products;
+
+  renderProducts(products);
+
+}
+
+function renderProducts(products){
 
   const productGrid =
   document.getElementById("product-grid");
+
+  productGrid.innerHTML = "";
 
   products.forEach(product => {
 
@@ -30,13 +44,24 @@ async function loadProducts(){
           ${product.price}
         </span>
 
-        <a href="https://wa.me/923184252676"
-           target="_blank"
-           class="product-btn">
+        <div class="product-actions">
 
-           ORDER NOW
+          <a href="https://wa.me/237652172270"
+             target="_blank"
+             class="product-btn">
 
-        </a>
+             WHATSAPP
+
+          </a>
+
+          <button class="details-btn"
+                  onclick="openModal('${product.id}')">
+
+                  DETAILS
+
+          </button>
+
+        </div>
 
       </div>
 
@@ -45,6 +70,80 @@ async function loadProducts(){
     productGrid.appendChild(card);
 
   });
+
+}
+
+function filterProducts(category){
+
+  if(category === "All"){
+
+    renderProducts(allProducts);
+
+    return;
+
+  }
+
+  const filtered =
+  allProducts.filter(product =>
+  product.category === category);
+
+  renderProducts(filtered);
+
+}
+
+function openModal(id){
+
+  const product =
+  allProducts.find(p => p.id === id);
+
+  const modal =
+  document.getElementById("product-modal");
+
+  const modalContent =
+  document.getElementById("modal-content");
+
+  modalContent.innerHTML = `
+
+    <img src="${product.image}" class="modal-image">
+
+    <h2>${product.name}</h2>
+
+    <p>${product.description}</p>
+
+    <span class="modal-price">
+      ${product.price}
+    </span>
+
+    <div class="modal-buttons">
+
+      <a href="https://wa.me/237652172270"
+         target="_blank"
+         class="product-btn">
+
+         ORDER ON WHATSAPP
+
+      </a>
+
+      <a href="https://t.me/mawjud126"
+         target="_blank"
+         class="telegram-btn">
+
+         TELEGRAM
+
+      </a>
+
+    </div>
+
+  `;
+
+  modal.style.display = "flex";
+
+}
+
+function closeModal(){
+
+  document.getElementById("product-modal")
+  .style.display = "none";
 
 }
 
