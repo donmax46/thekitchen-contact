@@ -148,3 +148,20 @@ function closeModal(){
 }
 
 loadProducts();
+function searchProducts(){
+
+  const search =
+  document.getElementById("searchInput")
+  .value
+  .toLowerCase();
+
+  const filtered =
+  allProducts.filter(product =>
+
+    product.name.toLowerCase().includes(search)
+
+  );
+
+  renderProducts(filtered);
+
+}
