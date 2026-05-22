@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Premium Green Collection",
+    "price": "$120",
+    "image": "assets/product1.jpg",
+    "description": "Luxury curated premium collection."
+  },
+
+  {
+    "name": "Neon Oil Series",
+    "price": "$90",
+    "image": "assets/product2.jpg",
+    "description": "High-end premium oil selection."
+  },
+
+  {
+    "name": "Private Access Kit",
+    "price": "$150",
+    "image": "assets/product3.jpg",
+    "description": "Exclusive premium accessory pack."
+  },
+
+  {
+    "name": "Luxury Disposable Series",
+    "price": "$80",
+    "image": "assets/product4.jpg",
+    "description": "Premium curated disposable collection."
+  }
+]
