@@ -34,12 +34,70 @@ if(menuToggle && mobileNav){
   menuToggle.addEventListener("click",()=>{
 
     mobileNav.classList.toggle("active");
+.menu-toggle{
 
+  display:none;
+
+  font-size:2rem;
+
+  color:#d4af37;
+
+  cursor:pointer;
+
+  z-index:10001;
+
+}
+
+@media(max-width:768px){
+
+  .menu-toggle{
+
+    display:block;
+
+  }
+
+  nav{
+
+    position:fixed;
+
+    top:0;
+    right:-100%;
+
+    width:75%;
+    height:100vh;
+
+    background:#050505;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    gap:40px;
+
+    padding-left:50px;
+
+    transition:0.5s;
+
+    z-index:9999;
+
+  }
+
+  nav.active{
+
+    right:0;
+
+  }
+
+}
   });
 
 }
 
-/* CLOSE MENU WHEN LINK CLICKED */
+/* CLOSE MENU */
 
 document
 .querySelectorAll("#mobile-nav a")
@@ -50,30 +108,5 @@ document
     mobileNav.classList.remove("active");
 
   });
-
-});
-
-/* SAFE INTRO LOADER */
-
-window.addEventListener("load",()=>{
-
-  const intro =
-  document.getElementById("cinematic-intro");
-
-  if(intro){
-
-    setTimeout(()=>{
-
-      intro.style.opacity = "0";
-
-      setTimeout(()=>{
-
-        intro.style.display = "none";
-
-      },1000);
-
-    },1800);
-
-  }
 
 });
