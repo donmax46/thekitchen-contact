@@ -1148,7 +1148,6 @@ section::before{
 
   pointer-events:none;
 
-}
 #cinematic-intro{
 
   position:fixed;
@@ -1166,6 +1165,15 @@ section::before{
 
   transition:1s ease;
 
+}
+
+.intro-logo{
+
+  width:320px;
+  max-width:80%;
+
+}
+   
 }
 
 .intro-logo{
