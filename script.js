@@ -49,10 +49,10 @@ window.addEventListener("load", () => {
 ========================= */
 
 const menuToggle =
-document.getElementById("menuToggle");
+document.getElementById("menu-toggle");
 
 const mobileNav =
-document.getElementById("mobileNav");
+document.getElementById("mobile-nav");
 
 menuToggle.addEventListener("click", () => {
 
@@ -84,7 +84,7 @@ navLinks.forEach((link) => {
 const cursor =
 document.querySelector(".custom-cursor");
 
-document.addEventListener("mousemove", (e) => {
+document.querySelectorAll("#mobile-nav a");
 
   cursor.style.left =
   e.clientX + "px";
@@ -176,5 +176,49 @@ buttons.forEach((btn) => {
     "translate(0,0)";
 
   });
+
+});
+gsap.to(".intro-logo",{
+
+  opacity:1,
+  scale:1,
+
+  duration:1.8
+
+});
+
+setTimeout(()=>{
+
+  gsap.to("#cinematic-intro",{
+
+    opacity:0,
+
+    duration:1.5,
+
+    onComplete:()=>{
+
+      document
+      .getElementById("cinematic-intro")
+      .style.display="none";
+
+    }
+
+  });
+
+},2600);
+
+window.addEventListener("mousemove",(e)=>{
+
+  const x =
+  (window.innerWidth / 2 - e.pageX) / 40;
+
+  const y =
+  (window.innerHeight / 2 - e.pageY) / 40;
+
+  document
+  .querySelector(".cinematic-light")
+  .style.transform =
+
+  `translate(${x}px, ${y}px)`;
 
 });
