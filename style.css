@@ -318,8 +318,11 @@ nav a{
   line-height:1.9;
 
   margin-bottom:40px;
-
+   
+  padding-top:180px;
+   
 }
+
 
 /* =========================
    BUTTONS
@@ -1161,14 +1164,15 @@ section::before{
 
   z-index:999999;
 
-  transition:1.5s ease;
+  transition:1s ease;
 
 }
 
 .intro-logo{
 
-  width:220px;
-
+width:320px;
+max-width:80%;
+   
   opacity:0;
 
   transform:scale(0.8);
@@ -1312,5 +1316,17 @@ section::after{
 .product-card:hover::before{
 
   opacity:1;
+
+}
+@media(max-width:768px){
+
+  .hero{
+
+    min-height:auto;
+
+    padding:
+      160px 7% 120px;
+
+  }
 
 }
