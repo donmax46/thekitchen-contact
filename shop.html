@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8"/>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0"/>
+
+  <title>Shop | THE KITCHEN DXB</title>
+
+  <meta name="description"
+        content="Explore THE KITCHEN DXB premium curated collection.">
+
+  <link rel="stylesheet"
+        href="style.css"/>
+
+  <link rel="icon"
+        type="image/png"
+        href="assets/logo.png">
+
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cinzel:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- FILM GRAIN -->
+
+<div class="film-grain"></div>
+
+<!-- LOADER -->
+
+<div id="loader">
+
+  <img src="assets/logo.png"
+       alt="THE KITCHEN DXB"
+       class="loader-logo">
+
+</div>
+
+<!-- TOPBAR -->
+
+<div class="topbar">
+
+  PREMIUM ACCESS • PRIVATE NETWORK • GLOBAL COORDINATION
+
+</div>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+  <a href="index.html"
+     class="logo">
+
+     <img src="assets/logo.png"
+          alt="THE KITCHEN DXB">
+
+  </a>
+
+  <div class="menu-toggle"
+       id="menu-toggle">
+
+       ☰
+
+  </div>
+
+  <nav id="mobile-nav">
+
+    <a href="index.html">HOME</a>
+
+    <a href="shop.html">SHOP</a>
+
+    <a href="about.html">ABOUT</a>
+
+    <a href="faq.html">FAQ</a>
+
+    <a href="contact.html">CONTACT</a>
+
+  </nav>
+
+</header>
+
+<!-- SHOP HERO -->
+
+<section class="hero-simple">
+
+  <div class="hero-content">
+
+    <p class="mini-title">
+
+      PREMIUM COLLECTION
+
+    </p>
+
+    <h1>
+
+      SHOP THE NETWORK
+
+    </h1>
+
+    <p class="hero-description">
+
+      Explore curated premium selections,
+      luxury digital presentation
+      and modern private-access aesthetics
+      optimized for mobile-first browsing.
+
+    </p>
+
+  </div>
+
+</section>
+
+<!-- SEARCH -->
+
+<section class="shop-search-section">
+
+  <div class="section-title">
+
+    PRODUCT COLLECTION
+
+  </div>
+
+  <input type="text"
+         id="searchInput"
+         placeholder="SEARCH PRODUCTS..."
+         class="search-box"
+         onkeyup="searchProducts()">
+
+  <!-- FILTERS -->
+
+  <div class="filter-buttons">
+
+    <button onclick="filterProducts('All')">
+
+      ALL
+
+    </button>
+
+    <button onclick="filterProducts('Exotics')">
+
+      EXOTICS
+
+    </button>
+
+    <button onclick="filterProducts('Oils')">
+
+      OILS
+
+    </button>
+
+    <button onclick="filterProducts('Accessories')">
+
+      ACCESSORIES
+
+    </button>
+
+    <button onclick="filterProducts('Vapes')">
+
+      VAPES
+
+    </button>
+
+  </div>
+
+  <!-- PRODUCT GRID -->
+
+  <div class="product-grid"
+       id="product-grid">
+
+  </div>
+
+</section>
+
+<!-- PRODUCT MODAL -->
+
+<div class="product-modal"
+     id="product-modal">
+
+  <div class="modal-box">
+
+    <span class="close-modal"
+          onclick="closeModal()">
+
+          ×
+
+    </span>
+
+    <div id="modal-content"></div>
+
+  </div>
+
+</div>
+
+<!-- ABOUT SHOP -->
+
+<section class="about-preview">
+
+  <div class="about-text">
+
+    <p class="mini-title">
+
+      PREMIUM CURATION
+
+    </p>
+
+    <h2>
+
+      Modern Luxury Presentation
+
+    </h2>
+
+    <p>
+
+      THE KITCHEN DXB combines
+      cinematic luxury branding,
+      curated product presentation
+      and premium mobile-first UX
+      within a lightweight digital storefront.
+
+    </p>
+
+    <p>
+
+      Designed for smooth browsing,
+      modern aesthetics
+      and private-access communication,
+      the platform prioritizes
+      simplicity, speed and visual consistency.
+
+    </p>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact-section">
+
+  <div class="section-title">
+
+    CONNECT PRIVATELY
+
+  </div>
+
+  <div class="contact-grid">
+
+    <a href="https://wa.me/237652172270"
+       target="_blank"
+       class="contact-card">
+
+       WHATSAPP
+
+    </a>
+
+    <a href="https://t.me/mawjud126"
+       target="_blank"
+       class="contact-card">
+
+       TELEGRAM
+
+    </a>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="footer-logo">
+
+    THE KITCHEN DXB
+
+  </div>
+
+  <p>
+
+    Premium Selection • Discreet Service • Modern Luxury
+
+  </p>
+
+  <p class="copyright">
+
+    © 2026 THE KITCHEN DXB.
+    All rights reserved.
+
+  </p>
+
+</footer>
+
+<!-- FLOATING BUTTONS -->
+
+<div class="floating-buttons">
+
+  <a href="https://wa.me/237652172270"
+     target="_blank"
+     class="float-btn whatsapp-float">
+
+     WhatsApp
+
+  </a>
+
+  <a href="https://t.me/mawjud126"
+     target="_blank"
+     class="float-btn telegram-float">
+
+     Telegram
+
+  </a>
+
+</div>
+
+<!-- SCRIPTS -->
+
+<script src="products.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
