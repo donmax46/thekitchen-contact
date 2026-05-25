@@ -1,22 +1,37 @@
 [
   {
+    "id": "luxury-culture-dubai",
     "title": "Luxury Culture in Dubai",
     "image": "assets/blog1.jpg",
-    "description": "Exploring premium lifestyle and modern luxury ecosystems.",
-    "slug": "luxury-culture-dubai"
+    "category": "Luxury",
+    "description": "Exploring modern premium culture, cinematic branding and elevated digital presentation.",
+    "date": "May 2026"
   },
 
   {
-    "title": "Private Networks & Premium Access",
+    "id": "digital-private-networks",
+    "title": "Digital Private Networks",
     "image": "assets/blog2.jpg",
-    "description": "Why exclusivity drives modern luxury branding.",
-    "slug": "private-networks"
+    "category": "Network",
+    "description": "Why premium digital ecosystems are shifting toward private-access communication systems.",
+    "date": "May 2026"
   },
 
   {
-    "title": "Crypto & Digital Luxury",
+    "id": "crypto-modern-commerce",
+    "title": "Crypto & Modern Commerce",
     "image": "assets/blog3.jpg",
-    "description": "How digital finance is reshaping premium services.",
-    "slug": "crypto-luxury"
+    "category": "Crypto",
+    "description": "How digital finance is reshaping premium online storefronts and modern luxury UX.",
+    "date": "May 2026"
+  },
+
+  {
+    "id": "cinematic-ui-systems",
+    "title": "Cinematic UI Systems",
+    "image": "assets/blog4.jpg",
+    "category": "Design",
+    "description": "The evolution of cinematic web interfaces and modern luxury digital branding.",
+    "date": "May 2026"
   }
 ]
