@@ -1,37 +1,55 @@
 [
   {
-    "id": "premium-green",
-    "name": "Premium Green Collection",
+    "id": "premium-exotics",
+    "name": "Premium Exotics",
     "price": "$120",
     "category": "Exotics",
     "image": "assets/product1.jpg",
-    "description": "Luxury curated premium collection."
+    "description": "Curated luxury flower collection with premium presentation and modern digital aesthetics."
   },
 
   {
-    "id": "neon-oils",
-    "name": "Neon Oil Series",
+    "id": "gold-oils",
+    "name": "Gold Oil Series",
     "price": "$90",
     "category": "Oils",
     "image": "assets/product2.jpg",
-    "description": "High-end premium oil selection."
+    "description": "Premium THC and CBD oil collection designed around modern luxury culture."
   },
 
   {
-    "id": "private-kit",
-    "name": "Private Access Kit",
-    "price": "$150",
-    "category": "Accessories",
-    "image": "assets/product3.jpg",
-    "description": "Exclusive premium accessory pack."
-  },
-
-  {
-    "id": "disposable-series",
-    "name": "Disposable Series",
+    "id": "disposable-vapes",
+    "name": "Disposable Vape Collection",
     "price": "$80",
     "category": "Vapes",
+    "image": "assets/product3.jpg",
+    "description": "Portable premium vape series optimized for sleek modern presentation."
+  },
+
+  {
+    "id": "private-access",
+    "name": "Private Access Series",
+    "price": "$150",
+    "category": "Accessories",
     "image": "assets/product4.jpg",
-    "description": "Premium disposable collection."
+    "description": "Exclusive premium collection built around cinematic digital luxury aesthetics."
+  },
+
+  {
+    "id": "premium-edibles",
+    "name": "Premium Edibles",
+    "price": "$110",
+    "category": "Exotics",
+    "image": "assets/product5.jpg",
+    "description": "Luxury curated edible selections with modern premium packaging concepts."
+  },
+
+  {
+    "id": "vapor-elite",
+    "name": "Vapor Elite",
+    "price": "$95",
+    "category": "Vapes",
+    "image": "assets/product6.jpg",
+    "description": "Modern disposable vapor collection with elevated digital storefront presentation."
   }
 ]
